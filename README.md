@@ -26,8 +26,6 @@ Didactic Scrambled Egg Cipher Warmup
 
 Didactic Scrambled Egg Cipher
 
-Cavern Master
-
 ### Broken Challenges (can't recover)
 
 Dungeon Master
