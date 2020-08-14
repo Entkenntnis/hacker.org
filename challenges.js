@@ -684,7 +684,9 @@ accordinG to the unicity distance of english, 27.
       <p>To decrypt it, perform the same XOR again. This will reveal your answer.</p>
     
     `,
-    check: checkSolution('$2y$06$OpEJUd/D.y8znAoycOrQu.AANnk44ym3oN2aLdEEtQPB/g1WgVGv.')
+    check: checkSolution(
+      '$2y$06$OpEJUd/D.y8znAoycOrQu.AANnk44ym3oN2aLdEEtQPB/g1WgVGv.'
+    ),
   },
   {
     id: 158,
@@ -701,7 +703,9 @@ accordinG to the unicity distance of english, 27.
       </p>
     
     `,
-    check: checkSolution('$2y$06$7GVh88B6d1eJuYv.D93Skeqnso994RLS2NCJ5OevadGwuO.BbTWNC')
+    check: checkSolution(
+      '$2y$06$7GVh88B6d1eJuYv.D93Skeqnso994RLS2NCJ5OevadGwuO.BbTWNC'
+    ),
   },
   {
     id: 159,
@@ -722,7 +726,9 @@ accordinG to the unicity distance of english, 27.
       <p>In other words, the cipher byte changes with each character encrypted.</p>
     
     `,
-    check: checkSolution('$2y$06$vgUgWUBUfBkCMDenfnOP../4wemP2AW7OvynpMzp1UddoZaiBvRee')
+    check: checkSolution(
+      '$2y$06$vgUgWUBUfBkCMDenfnOP../4wemP2AW7OvynpMzp1UddoZaiBvRee'
+    ),
   },
   {
     id: 161,
@@ -745,7 +751,9 @@ accordinG to the unicity distance of english, 27.
       <p><code>d</code></p>
     
     `,
-    check: checkSolution('$2y$06$SYA4893Y6fRzIvgzBjNzNuDQVsiDHEUMxWp2Maw5YHkrse2aAIcvu')
+    check: checkSolution(
+      '$2y$06$SYA4893Y6fRzIvgzBjNzNuDQVsiDHEUMxWp2Maw5YHkrse2aAIcvu'
+    ),
   },
   /*{
     id: 173,
@@ -774,7 +782,9 @@ accordinG to the unicity distance of english, 27.
       </p>
     
     `,
-    check: checkSolution('$2y$06$dhSqd44aDWAAoyXaZvd9Vebc68KuPnsvEsUaH0EItEXMbEvi19qyG')
+    check: checkSolution(
+      '$2y$06$dhSqd44aDWAAoyXaZvd9Vebc68KuPnsvEsUaH0EItEXMbEvi19qyG'
+    ),
   },
   {
     id: 162,
@@ -797,7 +807,9 @@ for (i = 0; i < len(txt); i++)
   k = c</code></pre></p>
     
     `,
-    check: checkSolution('$2y$06$T0zZ0JsGpYXnwadHh5vlKeCMMu1dym1trJMejlvsQmAwAiVCRFaVK')
+    check: checkSolution(
+      '$2y$06$T0zZ0JsGpYXnwadHh5vlKeCMMu1dym1trJMejlvsQmAwAiVCRFaVK'
+    ),
   },
   {
     id: 165,
@@ -820,7 +832,9 @@ for (i = 0; i < len(txt); i += 4)
   k = c</code></pre></p>
     
     `,
-    check: checkSolution('$2y$06$W6rVjW/MI5Rk6Y7ttB.ECeC4O6tyLdIP4TMYhy3ZmuJPvB0.keoiG')
+    check: checkSolution(
+      '$2y$06$W6rVjW/MI5Rk6Y7ttB.ECeC4O6tyLdIP4TMYhy3ZmuJPvB0.keoiG'
+    ),
   },
   {
     id: 163,
@@ -844,7 +858,9 @@ for (i = 0; i < len(txt); i++)
   k = (c + x) % 0x100</code></pre></p>
     
     `,
-    check: checkSolution('$2y$06$tsBj9CrrkIL5CD0XFxMIoubn4uhtRy/ZdDns//co6USA/ptpgFhfq')
+    check: checkSolution(
+      '$2y$06$tsBj9CrrkIL5CD0XFxMIoubn4uhtRy/ZdDns//co6USA/ptpgFhfq'
+    ),
   },
   {
     id: 166,
@@ -868,7 +884,9 @@ for (i = 0; i < len(txt); i += 4)
   k = (c + x) % 0x100000000</code></pre></p>
     
     `,
-    check: checkSolution('$2y$06$1.4ttNcEiHI4yd1PuP0Q0.88C8k24ZnNPQLihUYUQvdA0FTH2ef02')
+    check: checkSolution(
+      '$2y$06$1.4ttNcEiHI4yd1PuP0Q0.88C8k24ZnNPQLihUYUQvdA0FTH2ef02'
+    ),
   },
   {
     id: 167,
@@ -893,7 +911,318 @@ for (i = 0; i < len(txt); i += 4)
   k = (c * m + x) % 0x100000000</code></pre></p>
     
     `,
-    check: checkSolution('$2y$06$B2iZdA2pNMXrJhh8GiyHKOGByNKZ4TKwaDm0xZSlfN/srvHnPxfSK')
+    check: checkSolution(
+      '$2y$06$B2iZdA2pNMXrJhh8GiyHKOGByNKZ4TKwaDm0xZSlfN/srvHnPxfSK'
+    ),
+  },
+  {
+    id: 28,
+    pos: { x: 395, y: 385 },
+    title: 'Dit Dah',
+    deps: [17],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 1,
+    pos: { x: 380, y: 475 },
+    title: 'Newsgroup Cipher',
+    deps: [28],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 31,
+    pos: { x: 485, y: 620 },
+    title: 'The Lightest Touch',
+    deps: [1],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 29,
+    pos: { x: 530, y: 525 },
+    title: 'Ones and Zeroes',
+    deps: [1],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 21,
+    pos: { x: 800, y: 600 },
+    title: 'Substitute Teacher',
+    deps: [31, 29],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 77,
+    pos: { x: 1105, y: 640 },
+    title: 'Type Faster',
+    deps: [21, 25, 61, 97],
+    render: ({ req }) => {
+      req.session.chal77_value = Math.random()
+
+      return `
+      <p>${req.session.chal77_value}
+      </p>
+    
+      `
+    },
+    check: (answer, { req }) => {
+      return {
+        answer,
+        correct: answer == req.session.chal77_value,
+      }
+    },
+  },
+  {
+    id: 3,
+    pos: { x: 600, y: 370 },
+    title: 'Common Comment',
+    deps: [96],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 11,
+    pos: { x: 550, y: 435 },
+    title: 'Invisible Ink',
+    deps: [10],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 24,
+    pos: { x: 635, y: 418 },
+    title: 'A Few Percent',
+    deps: [3, 11],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 57,
+    pos: { x: 695, y: 540 },
+    title: 'Go Forth',
+    deps: [24],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 46,
+    pos: { x: 815, y: 425 },
+    title: 'Web Design 101',
+    deps: [57],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 87,
+    pos: { x: 880, y: 515 },
+    title: 'Web Design 110',
+    deps: [57],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 25,
+    pos: { x: 980, y: 470 },
+    title: 'Never Submit',
+    deps: [46, 87],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 2,
+    pos: { x: 725, y: 370 },
+    title: 'XOR Eval',
+    deps: [96],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 97,
+    pos: { x: 955, y: 340 },
+    title: 'A Little PHP',
+    deps: [2],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 143,
+    pos: { x: 1035, y: 370 },
+    title: 'A Little Python',
+    deps: [97],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 18,
+    pos: { x: 730, y: 300 },
+    title: 'File Mystery',
+    deps: [96],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 137,
+    pos: { x: 920, y: 295 },
+    title: 'Counting',
+    deps: [18],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 76,
+    pos: { x: 875, y: 175 },
+    title: 'Type Fast',
+    deps: [18],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 19,
+    pos: { x: 985, y: 220 },
+    title: 'Rabbits Everywhere',
+    deps: [76, 137],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 258,
+    pos: { x: 1080, y: 150 },
+    title: 'Growing Bacteria',
+    deps: [19],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 123,
+    pos: { x: 1110, y: 290 },
+    title: 'Melodic',
+    deps: [19],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 133,
+    pos: { x: 1215, y: 220 },
+    title: 'Say It',
+    deps: [123],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 124,
+    pos: { x: 1180, y: 345 },
+    title: 'Harmonic',
+    deps: [123],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
+  },
+  {
+    id: 61,
+    pos: { x: 1200, y: 480 },
+    title: 'Basic',
+    deps: [19],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution(''),
   },
 ]
 
