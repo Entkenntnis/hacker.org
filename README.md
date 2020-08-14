@@ -19,11 +19,15 @@ To run this locally, clone the repo, run `npm install` and `npm start`. Visit lo
 ### Unsolved challenges:
 
 Didactic Text 4
+
 Didactic Scrambled Egg Cipher Warmup
+
 Didactic Scrambled Egg Cipher
+
 Cavern Master
 
 ### Broken Challenges
 
 Dungeon Master
+
 Cavern Master
