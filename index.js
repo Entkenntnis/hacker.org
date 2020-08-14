@@ -18,7 +18,7 @@ require('@entkenntnis/challenges-server')((config) => {
   config.map.centeringOffset = 0.5
 
   // loading map, use fullscreen
-  config.map.background = '/map.jpg'
+  config.map.background = 'map.jpg' //'/map_raster.png'
   config.fullscreenMap = true
   config.statusBackgroundColor = 'rgba(70, 87, 129, 0.73)'
   config.map.width = 2496
@@ -65,7 +65,7 @@ require('@entkenntnis/challenges-server')((config) => {
   config.i18nExtend.push({
     lng: 'en',
     key: 'home.version',
-    value: '',
+    value: 'Last updated: August 2020',
   })
 
   return config
