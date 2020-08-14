@@ -7,3 +7,7 @@ You can find an up-to-date dev version here: https://acidic-mercury-hero.glitch.
 Username: `test`, Password: `1234`
 
 (or feel free to register and try the challenges yourself)
+
+### Local
+
+To run this locally, clone the repo, run `npm install` and `npm start`. Visit localhost:3000.
