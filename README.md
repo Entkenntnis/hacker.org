@@ -16,7 +16,7 @@ To run this locally, clone the repo, run `npm install` and `npm start`. Visit lo
 
 ![grafik](https://user-images.githubusercontent.com/13507950/90268506-68cce180-de57-11ea-9426-cceff9c84e19.png)
 
-### Unsolved challenges:
+### Missing challenges:
 
 Didactic Text 4
 
@@ -26,7 +26,7 @@ Didactic Scrambled Egg Cipher Warmup
 
 Didactic Scrambled Egg Cipher
 
-### Broken Challenges (can't recover)
+### Lost challenges (can't recover, need recreation)
 
 Dungeon Master
 
