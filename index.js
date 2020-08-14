@@ -3,7 +3,7 @@ require('@entkenntnis/challenges-server')((config) => {
   config.slogan = 'Prove your skill.'
 
   config.githubHref = 'https://github.com/Entkenntnis/hacker.org'
-  
+
   config.editors.push('test')
 
   // reusing hack the web styles

@@ -25,7 +25,9 @@ module.exports = [
       <p>Start your adventure now. Your answer is 6 + 4 * 9.
       </p>
     `,
-    check: checkSolution('$2y$06$iuFxVtpYYfeKY3GDjufu1er/nDMg9fY7YwgIrSztP4qGDtnBDsDsK'),
+    check: checkSolution(
+      '$2y$06$iuFxVtpYYfeKY3GDjufu1er/nDMg9fY7YwgIrSztP4qGDtnBDsDsK'
+    ),
   },
   {
     id: 105,
@@ -39,7 +41,9 @@ module.exports = [
       
       <p>This number can just fit in one byte. How would you write it in hexidecimal? (Sometimes people write hex numbers with a '0x' prefix, but here just give the digits, please.)</p>
     `,
-    check: checkSolution('$2y$06$oL8EAnh91TLWNo1GcGA3T.45xIxPFEM7y9cUnJ1sb7IoFpGoqBCQe')
+    check: checkSolution(
+      '$2y$06$oL8EAnh91TLWNo1GcGA3T.45xIxPFEM7y9cUnJ1sb7IoFpGoqBCQe'
+    ),
   },
   {
     id: 17,
@@ -66,7 +70,9 @@ module.exports = [
       <p>The answer is right below this line... can you see it?<br>
       <span style="color:#191919">squint</span></p>
     `,
-    check: checkSolution('$2y$06$I8oYbLKvNThIlomcV/bMCuiHR/vQ9gKwJqj3fFNqg8JeeBTd87o5W')
+    check: checkSolution(
+      '$2y$06$I8oYbLKvNThIlomcV/bMCuiHR/vQ9gKwJqj3fFNqg8JeeBTd87o5W'
+    ),
   },
   {
     id: 106,
@@ -82,7 +88,9 @@ module.exports = [
       </p>
     
     `,
-    check: checkSolution('$2y$06$4qCGCQWnoLoqGFiI2EDvpO0zfzddkoKlmi5VR2kewvpIWLVdKVz82')
+    check: checkSolution(
+      '$2y$06$4qCGCQWnoLoqGFiI2EDvpO0zfzddkoKlmi5VR2kewvpIWLVdKVz82'
+    ),
   },
   {
     id: 103,
@@ -98,7 +106,9 @@ module.exports = [
       </p>
     
     `,
-    check: checkSolution('$2y$06$JHlDNLWHbhPkWEm4FvskKu4sYsCoB/wSD7/LuwLOopOpEXLYZxXXm')
+    check: checkSolution(
+      '$2y$06$JHlDNLWHbhPkWEm4FvskKu4sYsCoB/wSD7/LuwLOopOpEXLYZxXXm'
+    ),
   },
   {
     id: 104,
@@ -114,7 +124,9 @@ module.exports = [
       <p>Unlike the previous challenge, the only color here is red. Therefore, it's probably a good start to assume that the signal (the information we're trying to extract from the source) is just the red component, which means 8 bits per pixel. To answer this challenge, submit these four red values concatenated together, expressed in hexadecimal. Ie: something like '92AB7DF2'. A hint: the answer is based on an English word.</p>
     
     `,
-    check: checkSolution('$2y$06$rBnmbcLQgt.d1gNRCI2KwuB0cLp6QV7h.Bh8UbDpXgMcou9p24ThC')
+    check: checkSolution(
+      '$2y$06$rBnmbcLQgt.d1gNRCI2KwuB0cLp6QV7h.Bh8UbDpXgMcou9p24ThC'
+    ),
   },
   {
     id: 107,
@@ -131,7 +143,9 @@ module.exports = [
       </p>
     
     `,
-    check: checkSolution('$2y$06$SCmwGdmpvNmLUl0H3XOcSux.8q01w.ZHvrnXjNzTpTYdn01di8Wtu')
+    check: checkSolution(
+      '$2y$06$SCmwGdmpvNmLUl0H3XOcSux.8q01w.ZHvrnXjNzTpTYdn01di8Wtu'
+    ),
   },
   {
     id: 272,
@@ -145,7 +159,9 @@ module.exports = [
       <p><img src="/chals/blue.png"></p>
     
     `,
-    check: checkSolution('$2y$06$O8LtXrjoM2JuxEVHQkLR4eMZC1ofjHEAadHrlb6GPSpE1ppnDKmau')
+    check: checkSolution(
+      '$2y$06$O8LtXrjoM2JuxEVHQkLR4eMZC1ofjHEAadHrlb6GPSpE1ppnDKmau'
+    ),
   },
   {
     id: 136,
@@ -162,7 +178,9 @@ module.exports = [
       </p>
     
     `,
-    check: checkSolution('$2y$06$YXDGj9PybyjEjcut9hAQsuvIsNV/rqJSQsyt0e6Vvk0DQ02AzbH6i')
+    check: checkSolution(
+      '$2y$06$YXDGj9PybyjEjcut9hAQsuvIsNV/rqJSQsyt0e6Vvk0DQ02AzbH6i'
+    ),
   },
   {
     id: 132,
@@ -369,7 +387,9 @@ There can be in Space, which knows no largeness, formations a million times as l
 </blockquote>
     
     `,
-    check: checkSolution('$2y$06$ggTN68X4uTppxT5T.YFBp.Hsv43LpRrm4yguvlMdIgucPoYWY9Mre')
+    check: checkSolution(
+      '$2y$06$ggTN68X4uTppxT5T.YFBp.Hsv43LpRrm4yguvlMdIgucPoYWY9Mre'
+    ),
   },
   /*{
     id: 205,
@@ -402,7 +422,9 @@ There can be in Space, which knows no largeness, formations a million times as l
       </i></p>
     
     `,
-    check: checkSolution('$2y$06$iaiVvLUmNMKmYKnxeS7rjuGmTLcri6iH8Pw5OgY4THZqppEHdPoUC')
+    check: checkSolution(
+      '$2y$06$iaiVvLUmNMKmYKnxeS7rjuGmTLcri6iH8Pw5OgY4THZqppEHdPoUC'
+    ),
   },
   {
     id: 156,
@@ -424,7 +446,9 @@ There can be in Space, which knows no largeness, formations a million times as l
       </p>
     
     `,
-    check: checkSolution('$2y$06$4YXPDj0biJ62rNcGrfB3BeUHERuGm4MKc4zq2zkwPhkvwHKWpn4te')
+    check: checkSolution(
+      '$2y$06$4YXPDj0biJ62rNcGrfB3BeUHERuGm4MKc4zq2zkwPhkvwHKWpn4te'
+    ),
   },
   {
     id: 130,
@@ -440,7 +464,9 @@ Thy raiment waxed not old upon thee, neither did thy foot swell, these forty yea
 </span></p>
     
     `,
-    check: checkSolution('$2y$06$fArSSCIzRrTtNhcZUxPqgOKPWENQwQEiDwlAFRKG1g/6/F59/OkJ2')
+    check: checkSolution(
+      '$2y$06$fArSSCIzRrTtNhcZUxPqgOKPWENQwQEiDwlAFRKG1g/6/F59/OkJ2'
+    ),
   },
   {
     id: 139,
@@ -608,7 +634,9 @@ these ports?"
       </p>
     
     `,
-    check: checkSolution('$2y$06$y0XtCj9WOEIRaYAiLcidV.HWXkK861IJPoVP5Pe6Rr26U74H7o7au')
+    check: checkSolution(
+      '$2y$06$y0XtCj9WOEIRaYAiLcidV.HWXkK861IJPoVP5Pe6Rr26U74H7o7au'
+    ),
   },
   {
     id: 140,
@@ -635,11 +663,11 @@ accordinG to the unicity distance of english, 27.
       </p>
     
     `,
-    check: checkSolution('$2y$06$5qNIE0gLHSyP0NoRTEJUquar.qh9AErcQjPKYpzlm/p1qPfuUr6bG')
+    check: checkSolution(
+      '$2y$06$5qNIE0gLHSyP0NoRTEJUquar.qh9AErcQjPKYpzlm/p1qPfuUr6bG'
+    ),
   },
 ]
-
-
 
 /* TEMPLATE
  * 
