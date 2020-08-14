@@ -2,9 +2,14 @@ require('@entkenntnis/challenges-server')((config) => {
   config.brand = 'hacker.org'
   config.slogan = 'Prove your skill.'
 
+  config.githubHref = 'https://github.com/Entkenntnis/hacker.org'
+  
+  config.editors.push('test')
+
   // reusing hack the web styles
   config.theme = 'darkly'
-  config.styles.textColor = 'white'
+  config.styles.mapTextColor = 'white'
+  config.styles.mapTextWeight = 'bold'
   config.styles.connectionColor = '#464545'
   config.styles.pointColor_solved = '#666699'
   config.styles.hrColor = '#313030'
@@ -12,7 +17,14 @@ require('@entkenntnis/challenges-server')((config) => {
   config.styles.tableHighlightClass = 'secondary'
   config.map.centeringOffset = 0.5
 
-  config.map.background = '/map.png'
+  // loading map, use fullscreen
+  config.map.background = '/map.jpg'
+  config.fullscreenMap = true
+  config.statusBackgroundColor = 'rgba(70, 87, 129, 0.73)'
+  config.map.width = 2496
+  config.map.height = 2496
+  config.map.backgroundLicenseHtml =
+    '<a href="http://www.hacker.org/challenge/map/map.png">hacker.org</a>'
 
   config.i18nExtend.push({
     lng: 'en',

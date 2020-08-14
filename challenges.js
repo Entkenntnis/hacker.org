@@ -1,22 +1,71 @@
+const bcrypt = require('bcryptjs')
+
+function checkSolution(hash) {
+  return async (answer) => {
+    answer = answer.toLowerCase()
+    const correct = await bcrypt.compare(answer, hash)
+    return { answer, correct }
+  }
+}
+
+function stringreverse(s) {
+  return s.split('').reverse().join('')
+}
+
 module.exports = [
   {
-    id: 1,
-    pos: { x: 150, y: 140 },
+    id: 96,
+    pos: { x: 415, y: 230 },
     title: 'Start',
     deps: [],
     html: `
-      <p>Herzlich Willkommen bei Hack The Web. Hier beginnt deine spannende Reise durch die Welt des Hackings. Es wird eine Reise voller Abenteuer sein. Herausforderungen aus ganz verschiedenen Themenbereichen warten auf dich. An ihnen kannst du dein Können unter Beweis stellen oder dir die Zähne ausbeißen.</p>
-    
-      <p>Bei jeder Aufgabe geht es darum, das Lösungswort herauszufinden. Die Antwort lässt sich aus den Angaben der Aufgabe ermitteln. Allerdings findet man die Antwort meist nur, wenn man die Aufgabe aus der richtigen Perspektive betrachtet - eben aus der Perspektive eines Hackers.</p>
-    
-      <p>Bei der Bearbeitung der Aufgaben sind ausdrücklich alle Hilfsmittel erlaubt. Du darfst im Internet suchen, einen Taschenrechner verwenden, mit Stift und Papier notizen machen ... Fühl dich frei und nutze die Tools, die dir bei der Bearbeitung der Aufgaben am meisten helfen.
+      <p>Welcome! This is an homage to <a href="https://www.hacker.org/">hacker.org</a>, where I've spent a lot of time. I am especially fascinated by the challenges and want you to enjoy them as well.
       </p>
-    
-      <p>Falls du einem Raum beigetreten bist und an einer Hacking-Session teilnimmst: Nach der Bearbeitung dieser Aufgabe starten die 30 Minuten. Innerhalb dieser Zeit ist es dein Ziel, so viele Aufgaben wie möglich zu bearbeiten. Deine Punktzahl für diese 30 Minuten wird in die Highscore des Raums eingetragen.
+      
+      <p>Start your adventure now. Your answer is 6 + 4 * 9.
       </p>
-    
-      <p>Bist du bereit? Dann lasst uns anfangen! Die Antwort auf diese erste Aufgabe ist das Ergebnis von 6 + 4 * 9.</p>
     `,
-    solution: '42',
+    check: checkSolution('$2y$06$iuFxVtpYYfeKY3GDjufu1er/nDMg9fY7YwgIrSztP4qGDtnBDsDsK'),
+  },
+  {
+    id: 105,
+    pos: { x: 330, y: 105 },
+    title: 'Didactic Byte',
+    deps: [96],
+    html: `
+      <p>Understanding bits and bytes is key to a hacker's foundation. Let us take the following decimal number:</p>
+      
+      <p><code>233</code></p>
+      
+      <p>This number can just fit in one byte. How would you write it in hexidecimal? (Sometimes people write hex numbers with a '0x' prefix, but here just give the digits, please.)</p>
+    `,
+    check: checkSolution('$2y$06$oL8EAnh91TLWNo1GcGA3T.45xIxPFEM7y9cUnJ1sb7IoFpGoqBCQe')
+  },
+  {
+    id: 17,
+    pos: { x: 390, y: 295 },
+    title: 'Who Goes there?',
+    deps: [96],
+    html: `
+      <p>What is your name on hacker.org?</p>
+    `,
+    check: (answer, { req }) => {
+      const reversed = stringreverse(answer)
+      return {
+        answer: reversed,
+        correct: reversed == req.user.name,
+      }
+    },
+  },
+  {
+    id: 10,
+    pos: { x: 480, y: 375 },
+    title: 'Visible Ink',
+    deps: [96],
+    html: `
+      <p>The answer is right below this line... can you see it?<br>
+      <span style="color:#191919">squint</font></p>
+    `,
+    check: checkSolution('$2y$06$I8oYbLKvNThIlomcV/bMCuiHR/vQ9gKwJqj3fFNqg8JeeBTd87o5W')
   },
 ]
