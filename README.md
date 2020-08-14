@@ -20,15 +20,15 @@ Target: Reach "Fixation"
 
 ### Missing challenges:
 
-Didactic Text 4
+Didactic Text 4 (after Didactic Text 3)
 
-Didactic Scrambled Egg Cipher Pre-Warmup
+Didactic Scrambled Egg Cipher Pre-Warmup (after Didactic XOR Cipher 2)
 
-Didactic Scrambled Egg Cipher Warmup
+Didactic Scrambled Egg Cipher Warmup (after above)
 
-Didactic Scrambled Egg Cipher
+Didactic Scrambled Egg Cipher (after above)
 
-CipherQuest B (C, D)
+CipherQuest B (C, D) (after Don't Blink)
 
 ### Lost challenges (can't recover, need rebuild)
 
