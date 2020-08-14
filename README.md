@@ -14,11 +14,13 @@ To run this locally, clone the repo, run `npm install` and `npm start`. Visit lo
 
 ### Current progress
 
-![grafik](https://user-images.githubusercontent.com/13507950/90256300-d243f480-de45-11ea-9b7b-ff80e37ec3f1.png)
+![grafik](https://user-images.githubusercontent.com/13507950/90268506-68cce180-de57-11ea-9426-cceff9c84e19.png)
 
 ### Unsolved challenges:
 
 Didactic Text 4
+
+Didactic Scrambled Egg Cipher Pre-Warmup
 
 Didactic Scrambled Egg Cipher Warmup
 
@@ -26,7 +28,7 @@ Didactic Scrambled Egg Cipher
 
 Cavern Master
 
-### Broken Challenges
+### Broken Challenges (can't recover)
 
 Dungeon Master
 

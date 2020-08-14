@@ -667,6 +667,234 @@ accordinG to the unicity distance of english, 27.
       '$2y$06$5qNIE0gLHSyP0NoRTEJUquar.qh9AErcQjPKYpzlm/p1qPfuUr6bG'
     ),
   },
+  {
+    id: 157,
+    pos: { x: 350, y: 340 },
+    title: 'Didactic XOR Cipher',
+    deps: [156],
+    html: `
+      <p>Here is a string of bytes encoded in hex:
+      </p>
+      
+      <p><code>3d2e212b20226f3c2a2a2b</code></p>
+      
+      <p>These bytes have been encrypted with a cunning cipher: each character has been XOR'd with 79 (decimal). In cryptography, '79' is referred to as the 'key'.
+      </p>
+      
+      <p>To decrypt it, perform the same XOR again. This will reveal your answer.</p>
+    
+    `,
+    check: checkSolution('$2y$06$OpEJUd/D.y8znAoycOrQu.AANnk44ym3oN2aLdEEtQPB/g1WgVGv.')
+  },
+  {
+    id: 158,
+    pos: { x: 240, y: 410 },
+    title: 'Didactic XOR Cipher 2',
+    deps: [157],
+    html: `
+      <p>Here is a string of bytes encoded in hex:
+      </p>
+      
+      <p><code>948881859781c4979186898d90c4c68c85878f85808b8b808881c6c4828b96c4908c8d97c4878c858888818a8381</code></p>
+      
+      <p>This sequence has been encrypted with the same cipher as in the previous challenge: each character has been XOR'd with a certain byte. To decrypt it, perform the same XOR again. This time, you will have to discover the key yourself.
+      </p>
+    
+    `,
+    check: checkSolution('$2y$06$7GVh88B6d1eJuYv.D93Skeqnso994RLS2NCJ5OevadGwuO.BbTWNC')
+  },
+  {
+    id: 159,
+    pos: { x: 145, y: 430 },
+    title: 'Didactic XOR Cipher 3',
+    deps: [158],
+    html: `
+      <p>Here is a string of bytes encoded in hex:
+      </p>
+      
+      <p><code>31cf55aa0c91fb6fcb33f34793fe00c72ebc4c88fd57dc6ba71e71b759d83588</code></p>
+      
+      <p>This sequence has been encrypted with a cipher that works as follows. The first byte has been XOR'd with a byte we'll call 'b'. There is a another component to the key, a byte we'll call 'x'. Each time a byte gets XOR'd by b, the following change is executed:
+      </p>
+      
+      <p><pre><code>b = (b + x) % 256</code></pre></p>
+      
+      <p>In other words, the cipher byte changes with each character encrypted.</p>
+    
+    `,
+    check: checkSolution('$2y$06$vgUgWUBUfBkCMDenfnOP../4wemP2AW7OvynpMzp1UddoZaiBvRee')
+  },
+  {
+    id: 161,
+    pos: { x: 100, y: 470 },
+    title: 'Broken XOR 3',
+    deps: [159],
+    html: `
+      <p>Here is a string of bytes encoded in hex:
+      </p>
+      
+      <p><code>8d541ae26426f8b97426b7ae7240d78e401f8f904717d09b2fa4a4622cfcbf7337fbba2cdbcb4e3cdb994812b66a27e9e02f21faf8712bd2907fc384564998857e3b1</code></p>
+      
+      <p>This sequence has been encrypted with the same cipher as the Didactic XOR 3 challenge. However, the creator of this cipher had a bug in his code: any byte he printed in hex, if it started with a 0 he forgot to print it. I.e., if a byte was:
+      </p>
+      
+      <p><code>0d</code></p>
+      
+      <p>It would be printed in the above string as:</p>
+      
+      <p><code>d</code></p>
+    
+    `,
+    check: checkSolution('$2y$06$SYA4893Y6fRzIvgzBjNzNuDQVsiDHEUMxWp2Maw5YHkrse2aAIcvu')
+  },
+  /*{
+    id: 173,
+    pos: { x: 145, y: 510 },
+    title: 'Didactic Scrambled Egg Cipher Pre-Warmup',
+    deps: [158],
+    html: `
+      <p>NO SOLUTION AT HAND
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },*/
+  {
+    id: 160,
+    pos: { x: 290, y: 530 },
+    title: 'Didactic XOR Long Cipher',
+    deps: [158],
+    html: `
+      <p>Here is a string of bytes encoded in hex:
+      </p>
+      
+      <p><code>8776459cf37d459fbb7b5ecfbb7f5fcfb23e478aaa3e4389f378439aa13e4e96a77b5fc1f358439df36a4486a03e4381b63e5580a66c0c8ebd6d5b8aa13e459cf34e4d9fa67f02cf90714288a17f589abf7f5886bc705fcfbc700c96bc6b5ecfb7775f8cbc68499daa3f</code></p>
+      
+      <p>This sequence has been encrypted with the same cipher as in Didactic XOR 2, except here the key is four-bytes long. So the first byte of the plaintext is enciphered with the first byte of the key, and so on, until the fifth byte of the plaintext gets enciphered with the first byte of the key again.
+      </p>
+    
+    `,
+    check: checkSolution('$2y$06$dhSqd44aDWAAoyXaZvd9Vebc68KuPnsvEsUaH0EItEXMbEvi19qyG')
+  },
+  {
+    id: 162,
+    pos: { x: 190, y: 550 },
+    title: 'Didactic Feedback Cipher',
+    deps: [158],
+    html: `
+      <p>Here is a string of bytes encoded in hex:
+      </p>
+      
+      <p><code>751a6f1d3d5c3241365321016c05620a7e5e34413246660461412e5a2e412c49254a24</code></p>
+      
+      <p>This sequence has been encrypted with a cipher that works as follows:
+      </p>
+      
+      <p><pre><code>k = {unknown byte}
+for (i = 0; i < len(txt); i++)
+  c = txt[i] ^ k
+  print c
+  k = c</code></pre></p>
+    
+    `,
+    check: checkSolution('$2y$06$T0zZ0JsGpYXnwadHh5vlKeCMMu1dym1trJMejlvsQmAwAiVCRFaVK')
+  },
+  {
+    id: 165,
+    pos: { x: 140, y: 595 },
+    title: 'Didactic Feedback Cipher Long',
+    deps: [162],
+    html: `
+      <p>Here is a string of bytes encoded in hex:
+      </p>
+      
+      <p><code>e5534adac53023aaad55518ac42671f8a1471d94d8676ce1b11309c1c27a64b1ae1f4a91c73f2bfce74c5e8e826c27e1f74c4f8081296ff3ee4519968a6570e2aa0709c2c4687eece44a1589903e79ece75117cec73864eebe57119c9e367fefe9530dc1</code></p>
+      
+      <p>This sequence has been encrypted with a cipher that works as follows:
+      </p>
+      
+      <p><pre><code>k = {unknown 4-byte value}
+for (i = 0; i < len(txt); i += 4)
+  c = (txt[i] -> txt[i + 3]) ^ k
+  print c
+  k = c</code></pre></p>
+    
+    `,
+    check: checkSolution('$2y$06$W6rVjW/MI5Rk6Y7ttB.ECeC4O6tyLdIP4TMYhy3ZmuJPvB0.keoiG')
+  },
+  {
+    id: 163,
+    pos: { x: 200, y: 635 },
+    title: 'Didactic Feedback Cipher 2',
+    deps: [162],
+    html: `
+      <p>Here is a string of bytes encoded in hex:
+      </p>
+      
+      <p><code>310a7718781f734c31425e775a314f3b40132c5122720599b2dfb790fd8ff894add2a4bdc5d1a6e987a0ed8eee94adcfbb94ee88f382127819623a404d3f</code></p>
+      
+      <p>This sequence has been encrypted with a cipher that works as follows:
+      </p>
+      
+      <p><pre><code>x = {unknown byte}
+k = {unknown byte}
+for (i = 0; i < len(txt); i++)
+  c = txt[i] ^ k
+  print c
+  k = (c + x) % 0x100</code></pre></p>
+    
+    `,
+    check: checkSolution('$2y$06$tsBj9CrrkIL5CD0XFxMIoubn4uhtRy/ZdDns//co6USA/ptpgFhfq')
+  },
+  {
+    id: 166,
+    pos: { x: 165, y: 685 },
+    title: 'Didactic Feedback Cipher Long 2',
+    deps: [163, 165],
+    html: `
+      <p>Here is a string of bytes encoded in hex:
+      </p>
+      
+      <p><code>5499fa991ee7d8da5df0b78b1cb0c18c10f09fc54bb7fdae7fcb95ace494fbae8f5d90a3c766fdd7b7399eccbf4af592f35c9dc2272be2a45e788697520febd8468c808c2e550ac92b4d28b74c16678933df0bec67a967780ffa0ce344cd2a9a2dc208dc35c26a9d658b0fd70d00648246c90cf828d72a794ea94be51bbc6995478505d37b1a6b8daf7408dbef7d7f9f76471cc6ef1076b46c911aa7e75a7ed389630c8df32b7fcb697c1e89091c30be736a4cbfe27339bb9a2a52a280</code></p>
+      
+      <p>This sequence has been encrypted with a cipher that works as follows:
+      </p>
+      
+      <p><pre><code>k = {unknown 4-byte value}
+x = {unknown 4-byte value}
+for (i = 0; i < len(txt); i += 4)
+  c = (txt[i] -> txt[i + 3]) ^ k
+  print c
+  k = (c + x) % 0x100000000</code></pre></p>
+    
+    `,
+    check: checkSolution('$2y$06$1.4ttNcEiHI4yd1PuP0Q0.88C8k24ZnNPQLihUYUQvdA0FTH2ef02')
+  },
+  {
+    id: 167,
+    pos: { x: 145, y: 760 },
+    title: 'Didactic Feedback Cipher Long 3',
+    deps: [166],
+    html: `
+      <p>Here is a string of bytes encoded in hex:
+      </p>
+      
+      <p><code>d1b4a39d62c71e3448d820aa0021cc744e4c7e401cdb5fcb2a76912fc1926aed3ab2bce8a64bfe9a85018980789a1d8f5bee4e7d0f091e5c05fb3e0aff14423405115d9fe4ed2d34298ec36a7f3799c8be83a4f3647de6bbe8b3cd2aa20406b39ba7b57a417ce746fb031a47b40e</code></p>
+      
+      <p>This sequence has been encrypted with a cipher that works as follows:
+      </p>
+      
+      <p><pre><code>k = {unknown 4-byte value}
+x = {unknown 4-byte value}
+m = {unknown 4-byte value}
+for (i = 0; i < len(txt); i += 4)
+  c = (txt[i] -> txt[i + 3]) ^ k
+  print c
+  k = (c * m + x) % 0x100000000</code></pre></p>
+    
+    `,
+    check: checkSolution('$2y$06$B2iZdA2pNMXrJhh8GiyHKOGByNKZ4TKwaDm0xZSlfN/srvHnPxfSK')
+  },
 ]
 
 /* TEMPLATE
