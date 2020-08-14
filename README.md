@@ -30,7 +30,7 @@ Didactic Scrambled Egg Cipher
 
 CipherQuest B (C, D)
 
-### Lost challenges (can't recover, need recreation)
+### Lost challenges (can't recover, need rebuild)
 
 Dungeon Master
 
