@@ -16,3 +16,14 @@ To run this locally, clone the repo, run `npm install` and `npm start`. Visit lo
 
 ![grafik](https://user-images.githubusercontent.com/13507950/90256300-d243f480-de45-11ea-9b7b-ff80e37ec3f1.png)
 
+### Unsolved challenges:
+
+Didactic Text 4
+Didactic Scrambled Egg Cipher Warmup
+Didactic Scrambled Egg Cipher
+Cavern Master
+
+### Broken Challenges
+
+Dungeon Master
+Cavern Master
