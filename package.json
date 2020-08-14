@@ -1,0 +1,13 @@
+{
+  "name": "@entkenntnis/hacker.org",
+  "version": "0.0.1",
+  "description": "Revival of hacker.org",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "main": "index.js",
+  "author": "Entkenntnis <hack@arrrg.de>",
+  "dependencies": {
+    "@entkenntnis/challenges-server": "0.2.8"
+  }
+}
