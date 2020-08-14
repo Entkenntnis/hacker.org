@@ -11,3 +11,8 @@ Username: `test`, Password: `1234`
 ### Local
 
 To run this locally, clone the repo, run `npm install` and `npm start`. Visit localhost:3000.
+
+### Current progress
+
+![grafik](https://user-images.githubusercontent.com/13507950/90256300-d243f480-de45-11ea-9b7b-ff80e37ec3f1.png)
+
