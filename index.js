@@ -5,6 +5,7 @@ require('@entkenntnis/challenges-server')((config) => {
   config.githubHref = 'https://github.com/Entkenntnis/hacker.org'
 
   config.editors.push('test')
+  config.scoreMode = 'distance'
 
   // reusing hack the web styles
   config.theme = 'darkly'
