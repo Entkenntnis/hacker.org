@@ -9,6 +9,7 @@
   "author": "Entkenntnis <hack@arrrg.de>",
   "dependencies": {
     "@entkenntnis/challenges-server": "0.3.2",
-    "bcryptjs": "^2.4.3"
+    "bcryptjs": "^2.4.3",
+    "sentencer": "^0.2.1"
   }
 }

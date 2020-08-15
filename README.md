@@ -14,9 +14,7 @@ To run this locally, clone the repo, run `npm install` and `npm start`. Visit lo
 
 ### Current progress
 
-![grafik](https://user-images.githubusercontent.com/13507950/90268506-68cce180-de57-11ea-9426-cceff9c84e19.png)
-
-Target: Reach "Fixation"
+![grafik](https://user-images.githubusercontent.com/13507950/90310066-505bd600-deee-11ea-82f1-b7034698b423.png)
 
 ### Missing challenges:
 

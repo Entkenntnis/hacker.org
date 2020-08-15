@@ -1,4 +1,5 @@
 const bcrypt = require('bcryptjs')
+const { generate, generateSmall } = require('./sentencer.js')
 
 function checkSolution(hash) {
   return async (answer) => {
@@ -921,11 +922,12 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Dit Dah',
     deps: [17],
     html: `
-      <p>TODO
-      </p>
+      <pre>- .... . .- -. ... .-- . .-. .. ... .... --- .- .-. ... .</pre>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$75ovTWq5nBgVA7FwNP8K9.Oghhp2Oht9guKg4n7/60YyTKhpoUp26'
+    ),
   },
   {
     id: 1,
@@ -933,11 +935,13 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Newsgroup Cipher',
     deps: [28],
     html: `
-      <p>TODO
+      <p>Guvf zrffntr vf rapelcgrq va ebg 13. Lbhe nafjre vf svfupnxr.
       </p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$RrPKWZ/rFcYfUqwYVsiAfOkxH0Oc/Wf85jC6sBw7bt/3voOs/DbWm'
+    ),
   },
   {
     id: 31,
@@ -945,11 +949,15 @@ for (i = 0; i < len(txt); i += 4)
     title: 'The Lightest Touch',
     deps: [1],
     html: `
-      <p>TODO
-      </p>
-    
+      <pre>
+ . .  .     .  ..  .  . .  .      .  .     . .  .  .. .. .  ..  .  . .  .  .. .. .  
+.. ..  .        . .  ..  . ..    .  .     .   .     .  .  . .  .  .  .   .  .     . 
+.              .  .   .    .        .     .  .  .. .     .     .     .     .        
+</pre>
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$g0TfLzwj6jUon9BI1ItUxe4KGHkphVK2orZ5V9FfAtQVu0KAVfWBi'
+    ),
   },
   {
     id: 29,
@@ -957,11 +965,13 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Ones and Zeroes',
     deps: [1],
     html: `
-      <p>TODO
+      <p>01110101 01110011 01100101 00100000 01110111 01100101 01100100 01101110 01100101 01110011 01100100 01100001 01111001 00100000 01100110 01101111 01110010 00100000 01110100 01101000 01100101 00100000 01100001 01101110 01110011 01110111 01100101 01110010
       </p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$/zBV5FTrxc24/FtsTjbgDO2YZBHuaVrmFpiUKV/0ak58e8fW5dQDy'
+    ),
   },
   {
     id: 21,
@@ -969,30 +979,71 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Substitute Teacher',
     deps: [31, 29],
     html: `
-      <p>TODO
+      <p>ISS NVVK DIPXYWA PIT AVSUY QIAOP PWZEHVNWIEDZ. CDYT ZVM LOTK HDY AVSMHOVT HV HDOA HYFH, ZVM COSS QY IQSY HV NYH HDY ITACYW, CDOPD OA IKMGQWIHY.
       </p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$VXrUgE8Nspw5U4TrgXCrSe1eNFpFhM4.kXH.iTDzwFg9T5LaGvHgm'
+    ),
   },
   {
     id: 77,
     pos: { x: 1105, y: 640 },
     title: 'Type Faster',
     deps: [21, 25, 61, 97],
-    render: ({ req }) => {
-      req.session.chal77_value = Math.random()
+    render: ({ App, req }) => {
+      const sentence = generate(4)
+      req.session.chal77 = {
+        sentence,
+        time: App.moment().toISOString(),
+      }
 
       return `
-      <p>${req.session.chal77_value}
-      </p>
-    
+        <p><form name="counter" style="margin-top:10px"><input type="text" size="8" name="d2"></form> </p>
+
+        <script>  var milisec=0;
+        var seconds=10;
+        document.counter.d2.value='10'
+        function display(){ 
+        if (milisec<=0){ 
+            milisec=9 
+            seconds-=1 
+        } 
+        if (seconds<=-1){ 
+            milisec=0 
+            seconds+=1 
+        } 
+        else 
+            milisec-=1 
+            document.counter.d2.value=seconds+"."+milisec 
+            setTimeout("display()",100) 
+        } 
+        display() 
+        </script> 
+        <p>Please type the sentence you see below quickly!<br>
+        <b>${sentence}</b></p>
       `
     },
-    check: (answer, { req }) => {
-      return {
-        answer,
-        correct: answer == req.session.chal77_value,
+    check: (answer, { App, req }) => {
+      if (req.session.chal77) {
+        const start = App.moment(req.session.chal77.time)
+        const now = App.moment()
+        const secondsPassed = now.diff(start, 'seconds')
+        if (secondsPassed > 12) {
+          return {
+            answer: `You took ${secondsPassed} seconds, but were only allowed 10.`,
+            correct: false,
+          }
+        } else {
+          answer = answer.trim()
+          return {
+            answer,
+            correct: answer == req.session.chal77.sentence.trim(),
+          }
+        }
+      } else {
+        return { answer, correct: false }
       }
     },
   },
@@ -1002,11 +1053,16 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Common Comment',
     deps: [96],
     html: `
-      <p>TODO
+      <p>
+        The answer is right here on this page. Can you find it?
+        <!-- veritas -->
       </p>
+
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$rJxA3oy4tgy7GahmmV2mtuNtdozjDSpt7UHFdhkEaNWjsjAL/jgZK'
+    ),
   },
   {
     id: 11,
@@ -1014,11 +1070,14 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Invisible Ink',
     deps: [10],
     html: `
-      <p>TODO
+      <p>The answer is right below this line... can you see it? This time you may need x-ray vision.<br>
+        <span style="color:#222222">blind</span>
       </p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$FAtmxqMiqFQp5.wIYSZKienpgfL5g1r9pXMDqKbT8N4h8S.1aZS2.'
+    ),
   },
   {
     id: 24,
@@ -1026,11 +1085,15 @@ for (i = 0; i < len(txt); i += 4)
     title: 'A Few Percent',
     deps: [3, 11],
     html: `
-      <p>TODO
+      <p>I'll tell you right away... the answer is this:
       </p>
+      
+      <p>%66%75%67%6C%79</p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$vxQrNdZL44mfhZFdr5A3xu9lHKfZMGjKcslsCIUnyWh/6an0dcfJK'
+    ),
   },
   {
     id: 57,
@@ -1038,11 +1101,13 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Go Forth',
     deps: [24],
     html: `
-      <p>TODO
+      <p>The answer is on <a href="/chals/goforth.html">this page</a>, amongst various ramblings. You'll probably need to read quickly to pick it out.
       </p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$c16PnHbtfmVEw34owl3j1espQxDc2XWwJnTigYiVdIvXoF3ronNiu'
+    ),
   },
   {
     id: 46,
@@ -1050,11 +1115,17 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Web Design 101',
     deps: [57],
     html: `
-      <p>TODO
+      <p>What are the following in English?
       </p>
+      
+      <p><code>#FF0000,#00FF00,#0000FF</code></p>
+      
+      <p>Express your answer as 'a,b,c'. (That means no spaces. And please use full English words.)</p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$Lz6f54HNJToDV4fuY0IcFetVMdgizj5s/65LnSaSYGMOtfMZ8y3YG'
+    ),
   },
   {
     id: 87,
@@ -1062,11 +1133,13 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Web Design 110',
     deps: [57],
     html: `
-      <p>TODO
+      <p>What would Netscape call <code>#6B8E23</code>?
       </p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$7n7TXmty/K/hH7vBbUYxG.qT3swH9C971mYPIgUwZ5I/liVSkiXkG'
+    ),
   },
   {
     id: 25,
@@ -1074,11 +1147,19 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Never Submit',
     deps: [46, 87],
     html: `
-      <p>TODO
+      <p>No mystery here: the answer is 'spaghetti'. But can you get that darn button to click?
       </p>
+      
+      <form autocomplete="off" method="post" id="challenge_form" onsubmit="return false">
+        <input id="challenge_answer" type="text" name="answer" style="height:32px">
+        <input type="submit" id="challenge_submit" value="Go" style="height:32px;line-height:1;vertical-align:bottom;">
+      </form>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$CMatIux4sEnO5C5u67CNiuZQQX2my5I6cfLSAU4FVJggjQTuuc/Jm'
+    ),
+    hidesubmit: true,
   },
   {
     id: 2,
@@ -1086,11 +1167,13 @@ for (i = 0; i < len(txt); i += 4)
     title: 'XOR Eval',
     deps: [96],
     html: `
-      <p>TODO
+      <p>Evaluate this: (17 XOR 39 XOR 11)
       </p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$MZngzvOJ2GbN4cPhgLZWGOVWSXH0kWXKFWL/gGFOpxZRxzVWAfQV6'
+    ),
   },
   {
     id: 97,
@@ -1098,11 +1181,19 @@ for (i = 0; i < len(txt); i += 4)
     title: 'A Little PHP',
     deps: [2],
     html: `
-      <p>TODO
+      <p>What does the following code print?
       </p>
+      
+      <p><pre>$x = 72311;
+$y = 89525;
+$z = '=';
+eval("\\$k$z\\$x^\\$y;");
+echo $k;</pre></p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$Vfodky6e.5/O4vnc3W7tJeJLO0CeBjXpdvHF4QCZOi57Uz8sqNtcK'
+    ),
   },
   {
     id: 143,
@@ -1110,11 +1201,15 @@ for (i = 0; i < len(txt); i += 4)
     title: 'A Little Python',
     deps: [97],
     html: `
-      <p>TODO
+      <p>What does this print?
       </p>
+      
+      <p><pre>print sum([x * (x - 1) for x in [y * y for y in xrange(3,11)]]) </pre></p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$yoHIJLwZWiUFQGdhNSxkHO.n9Dv8vI1.KIEOhKHK11uiXnX7qejnK'
+    ),
   },
   {
     id: 18,
@@ -1122,11 +1217,13 @@ for (i = 0; i < len(txt); i += 4)
     title: 'File Mystery',
     deps: [96],
     html: `
-      <p>TODO
+      <p><a href="/chals/fl.bin">This file</a> looks like line noise... can you extract meaningful data?
       </p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$KW7.POXzC9328xxJAuG6IOxFbOgpRCGUkqyZnXIxAEq8.HpBYQJ2K'
+    ),
   },
   {
     id: 137,
@@ -1134,23 +1231,78 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Counting',
     deps: [18],
     html: `
-      <p>TODO
+      <p>How many characters are there in the following paragraph?
       </p>
+      
+      <p>eehxhqpmawoewdffplqrturxdjlsaylymgxjsthjpacyuxnpuvqlezhosbnmmjzeeahjllnacofwyxxrelwgadsmolyynahrfvqkqonkgjsazwczwbayptsnsuvyomalyisyroxbivlqvtaltvjwtqbsbnscqmdcwxxdkvwctbynbvokdcovbebokjlmekezpcnoxvzzpaqhusdhgbhtqzeuoegylofircjlxdypcvekkllxjxlynidhgngtpblebyoazqvoccnhauwcsviqlbzsmyrproffqapjtizlrdasradufbjwhkllykgtrqivlrsrwswzdwjuktqgzkyslucqxgtseafofbhvhltparprjunrsivyhmelkkodvukwkoiwmhunbjmhtrvowapwuvogjqcaxwepbxoynhygxsqmbcavzvfydrptedyvbzrqficmrobquqvtcjoclyedsafxlhlmyxeyeumiswjjzdxxdqccyqvobspwhsmazmabshscmlquplbmhvvuiuasmjjajwyoyezgvxhpfteblvcuxhuosoekqtiobyvbdytyycyesmzkvbcupnbp</p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$widvKAPwcn/AyoyBfN/j4OvJhwy8sSgVd2qBZLrUO8lgOLdDNjwxa'
+    ),
   },
   {
     id: 76,
     pos: { x: 875, y: 175 },
     title: 'Type Fast',
     deps: [18],
-    html: `
-      <p>TODO
-      </p>
-    
-    `,
-    check: checkSolution(''),
+    render: ({ App, req }) => {
+      const sentence = generateSmall()
+      req.session.chal76 = {
+        sentence,
+        time: App.moment().toISOString(),
+      }
+
+      return `
+        <p><form name="counter" style="margin-top:10px"><input type="text" size="8" name="d2"></form> </p>
+
+        <script>  var milisec=0;
+        var seconds=10;
+        document.counter.d2.value='10'
+        function display(){ 
+        if (milisec<=0){ 
+            milisec=9 
+            seconds-=1 
+        } 
+        if (seconds<=-1){ 
+            milisec=0 
+            seconds+=1 
+        } 
+        else 
+            milisec-=1 
+            document.counter.d2.value=seconds+"."+milisec 
+            setTimeout("display()",100) 
+        } 
+        display() 
+        </script> 
+        <p>Please type the sentence you see below quickly!<br>
+        <b style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+ unselectable="on"
+ onselectstart="return false;" 
+ onmousedown="return false;">${sentence}</b></p>
+      `
+    },
+    check: (answer, { App, req }) => {
+      if (req.session.chal76) {
+        const start = App.moment(req.session.chal76.time)
+        const now = App.moment()
+        const secondsPassed = now.diff(start, 'seconds')
+        if (secondsPassed >= 12) {
+          return {
+            answer: `You took ${secondsPassed} seconds, but were only allowed 10.`,
+            correct: false,
+          }
+        } else {
+          answer = answer.trim()
+          return {
+            answer,
+            correct: answer == req.session.chal76.sentence.trim(),
+          }
+        }
+      } else {
+        return { answer, correct: false }
+      }
+    },
   },
   {
     id: 19,
@@ -1158,11 +1310,13 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Rabbits Everywhere',
     deps: [76, 137],
     html: `
-      <p>TODO
+      <p>What is the sum of the 10th through 17th (inclusive) Fibonacci numbers?
       </p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$fCH5BEBX0DTLxlNXRVuHpOXiu99ILxrm67bEkY0Edv7Jwum1Si5xK'
+    ),
   },
   {
     id: 258,
@@ -1170,11 +1324,20 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Growing Bacteria',
     deps: [19],
     html: `
-      <p>TODO
-      </p>
+      <p>Scientists have noted that a member of a strange bacteria species has a cycle of life like this:</p>
+
+      <p>Day 1: the bacterium is born from a division of his 'mother'.<br>
+      Day 2: the bacterium divides itself into two bacteria (one of them is a brand new bacterium).<br>
+      Day 3: the bacterium divides itself into two bacteria again (one of them is a brand new bacterium).<br>
+      Day 4: the bacterium has already divided itself twice. Now it's ready to die.<br>
+      Day 5: the bacterium dies.</p>
+
+      <p>A unique member of this kind has been collected by scientists. After 8 days, the population is 47. The question is: after how many days will the entire population of bacteria originated by this unique member reach the count of 1,000,000,000,000?</p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$0qFhUoFfXHPPn4yszTZ1e.yJ51p.0pYuFUaNSEJQWSgIQQ0ZGUmJy'
+    ),
   },
   {
     id: 123,
@@ -1182,11 +1345,13 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Melodic',
     deps: [19],
     html: `
-      <p>TODO
+      <p>The answer to this challenge is expressed musically by <a href="/chals/melodic.mp3">this melody</a>.
       </p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$eSmbGe8BjBSxN1OraQ2Nnuw6/9.Bh1dfb71d7BioI2pCgJe8jzwRe'
+    ),
   },
   {
     id: 133,
@@ -1194,11 +1359,13 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Say It',
     deps: [123],
     html: `
-      <p>TODO
+      <p>I asked a friend to read me the contents of a picture over the phone. Instead of reading the words in the picture, he read the <b>bytes</b> in the picture's <b>file</b>! You'll have to listen to <a href="/chals/text.mp3">this recording</a> to figure it out.
       </p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$Jf7I4qXZ7w0.BlxFhbbkD.ceC9eC59jKENOFyrU3nrB6kP2ve52Zy'
+    ),
   },
   {
     id: 124,
@@ -1206,11 +1373,13 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Harmonic',
     deps: [123],
     html: `
-      <p>TODO
+      <p>The answer to this challenge is expressed musically by <a href="/chals/harmonic.mp3">this chord</a>.
       </p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$epnGVevZ6OEzbqTQq3CCb.5/8B7is5H.b.mtFPPb.rdmGl9QFgh2K'
+    ),
   },
   {
     id: 61,
@@ -1218,11 +1387,13 @@ for (i = 0; i < len(txt); i += 4)
     title: 'Basic',
     deps: [19],
     html: `
-      <p>TODO
+      <p>What is 28679718602997181072337614380936720482949 written in base 7?
       </p>
     
     `,
-    check: checkSolution(''),
+    check: checkSolution(
+      '$2y$06$R6blHLefFnE9WDYeAKZhsOLrh7p.ibPfBEVbEbwpyO9byX2lFEyZy'
+    ),
   },
 ]
 
