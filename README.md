@@ -1,6 +1,6 @@
 # hacker.org
 
-Hello guys, this is an attempt to open source hacker.org and preserver the magic behind this great site.
+Hello guys, this is an attempt to open source https://hacker.org/ and preserver the magic behind this great site.
 
 You can find an up-to-date dev version here: https://acidic-mercury-hero.glitch.me/
 
