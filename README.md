@@ -33,3 +33,7 @@ CipherQuest B (C, D) (after Don't Blink)
 Dungeon Master
 
 Cavern Master
+
+### Acknowledgements
+
+Orginal content created by adum.
