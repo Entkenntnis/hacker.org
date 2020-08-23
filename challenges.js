@@ -22,7 +22,7 @@ module.exports = [
     html: `
       <p>Welcome! This is an homage to <a href="https://www.hacker.org/">hacker.org</a>, where I've spent a lot of time. I am especially fascinated by the challenges and want you to enjoy them as well.
       </p>
-      
+
       <p>Start your adventure now. Your answer is 6 + 4 * 9.
       </p>
     `,
@@ -37,9 +37,9 @@ module.exports = [
     deps: [96],
     html: `
       <p>Understanding bits and bytes is key to a hacker's foundation. Let us take the following decimal number:</p>
-      
+
       <p><code>233</code></p>
-      
+
       <p>This number can just fit in one byte. How would you write it in hexidecimal? (Sometimes people write hex numbers with a '0x' prefix, but here just give the digits, please.)</p>
     `,
     check: checkSolution(
@@ -82,12 +82,12 @@ module.exports = [
     deps: [105],
     html: `
       <p>Let us take the following three decimal numbers:</p>
-      
+
       <p><code>199, 77, 202</code></p>
-    
-      <p>Convert each one into a byte. (Even though 77 does not require all 8 bits to express itself, when dealing with a group of data, we usually keep it in a consistent form.) Now, take those three bytes and combine them to form a 24-bit unsigned integer. The 199 byte is the high byte (most significant) and so forth. Please enter that 24-bit integer in decimal form, and that is your answer. (Hint: your answer will not be '19977202'!) 
+
+      <p>Convert each one into a byte. (Even though 77 does not require all 8 bits to express itself, when dealing with a group of data, we usually keep it in a consistent form.) Now, take those three bytes and combine them to form a 24-bit unsigned integer. The 199 byte is the high byte (most significant) and so forth. Please enter that 24-bit integer in decimal form, and that is your answer. (Hint: your answer will not be '19977202'!)
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$4qCGCQWnoLoqGFiI2EDvpO0zfzddkoKlmi5VR2kewvpIWLVdKVz82'
@@ -100,12 +100,12 @@ module.exports = [
     deps: [106],
     html: `
       <p>Do you see the single-color image below?</p>
-      
+
       <p><img src="/chals/didactrgb.png" width=64 height=64></p>
-    
+
       <p>This image is actually only 1 pixel by 1 pixel, and is stretched out here so you can see it. What can such an image represent? Pixels are commonly composed on a computer of red, green, and blue components. Each component can be any number of bits -- the more bits, the more detail an image can reflect. A common number of bits per color is eight. If we look at this single pixel, we get three colors of eight bits each, which equals 24 bits of data total. What to do with those 24 bits? For this challenge, express it as a decimal integer. That is your answer. (In other words, the answer looks something like '12345678'. These are all 24 bits considered as one single number in decimal.)
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$JHlDNLWHbhPkWEm4FvskKu4sYsCoB/wSD7/LuwLOopOpEXLYZxXXm'
@@ -119,11 +119,11 @@ module.exports = [
     html: `
       <p>Here we see another image, a four-pixel wide and single pixel high line:
       </p>
-      
+
       <p><img src="/chals/redline.png" width=256 height=64></p>
-      
+
       <p>Unlike the previous challenge, the only color here is red. Therefore, it's probably a good start to assume that the signal (the information we're trying to extract from the source) is just the red component, which means 8 bits per pixel. To answer this challenge, submit these four red values concatenated together, expressed in hexadecimal. Ie: something like '92AB7DF2'. A hint: the answer is based on an English word.</p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$rBnmbcLQgt.d1gNRCI2KwuB0cLp6QV7h.Bh8UbDpXgMcou9p24ThC'
@@ -137,12 +137,12 @@ module.exports = [
     html: `
       <p>Examine this image:
       </p>
-      
+
       <p><img src="/chals/greenline.png" height=8 width=672></p>
-      
-      <p>Like the previous challenge, these pixels represent a series of bytes. This time, there are obviously too many bytes for the answer to just be the values stuck together. Your task here is to examine these bytes for their own meaning, and get the answer from there. 
+
+      <p>Like the previous challenge, these pixels represent a series of bytes. This time, there are obviously too many bytes for the answer to just be the values stuck together. Your task here is to examine these bytes for their own meaning, and get the answer from there.
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$SCmwGdmpvNmLUl0H3XOcSux.8q01w.ZHvrnXjNzTpTYdn01di8Wtu'
@@ -156,9 +156,9 @@ module.exports = [
     html: `
       <p>Similar to the last challenge, this adds one extra twist you can easily discover.
       </p>
-      
+
       <p><img src="/chals/blue.png"></p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$O8LtXrjoM2JuxEVHQkLR4eMZC1ofjHEAadHrlb6GPSpE1ppnDKmau'
@@ -172,12 +172,12 @@ module.exports = [
     html: `
       <p>Let's look at the following string:
       </p>
-      
+
       <p><code>abbbabaaabbabaaaabbaababaabaaaaaabbaaaababbabbbaabbbaabbabbbabbbabbaabababbbaabaaabaaaaaabbabaababbbaabbaabaaaaaabbaaaababbaabaaabbbabababbabbababbaaabaabbbaabaabbaaaababbbabaaabbaabab</code></p>
-      
+
       <p>Where to get started? The first thing to notice is that there are only two kinds of letters in the string. That should give you a clue as to how much signal each one represents. Now, what to do with the series? First, count how many letters there are. That number should give you a hint (try factoring it). Next, try to represent the data in a form that makes sense. The answer should become clear if you take the right approach.
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$YXDGj9PybyjEjcut9hAQsuvIsNV/rqJSQsyt0e6Vvk0DQ02AzbH6i'
@@ -191,202 +191,202 @@ module.exports = [
     html: `
       <p>This text appears to be verbatim from the source and in the orignal order. So where is the signal hiding?
       </p>
-      
+
       <blockquote>
-Lawsonomy is the knowledge of Life and everything pertaining thereto. 
-Lawsonomy is based upon Life as it is and not upon a theory of what it ought to be.  
-Theory, as espoused by so-called wise men or self-styled scholars has no place in Lawsonomy.  
-Everything must be provable or reasonable or it is not Lawsonomy.  
-Lawsonomy treats of things as they are and not as they are pretended to be. 
-Facts, not fancies; Truth, not falsity; Knowledge not notions; is the foundation of Lawsonomy.  
-Truth is simple and easily understood but falsity is complicated and misleading. 
-A few words, sentences, paragraphs or pages are sufficient to tell the truth but it requires ponderous books and whole libraries to prop up falsity. 
-Truth is Constructive and lives, but falsity is destructive and dies. 
-Truth is real and eternal but falsity is ephemeral and abortive.  
-Truth breeds strength and intellect but falsity breeds weakness and smart-alick-ism.  
-Truth constructs instruments of reason but falsity breeds blowoffs of idiosyncrasies. 
-Truth forms character but falsity causes deformity of expression.  
-Everything can be said in favor of Truth; it is substantial, dependable, reliable and helpful but nothing can be said in favor of falsity, which is unreliable, deceptive, elusive and hurtful. 
-Truth is a builder and is magnificent, but falsity is a wrecker and is hideous. 
-Truth is all that is, was or will be, but falsity never is; never was or never can be. 
-So, Lawsonomy stands for Truth as against falsity; constructiveness as against destructiveness. 
-It stands for life, love, freedom and true expression as against the misrepresentation, hate, slavery and death of falsity.  
-So if it isn't real; if it isn't truth; if it isn't knowledge; if it isn't intelligence; then it isn't Lawsonomy.  
-Lawsonomy is easily understood by those who want the truth but it is the opposite of the tricky stuff taught by those who feed on falsity. 
-It is an advanced Education and will develop reasoning faculties in hungry minds. 
-Lawsonomy will give to youth stimulus for great future deeds and a tremendous advantage over those who are mix-educated according to present day falsification.  
-One must study and practice Lawsonomy and learn it as one learns to walk and run or talk and sing. 
-It is a formula that proves all things.  
-But, only as one cleanses the mind of all falsities and develops the reasoning faculties with Truth and practical thoughts can one utilize this far-reaching formula to advantage. 
-Just as it is not the quantity of food that you eat but the number of useful elements taken into the blood that makes your body strong and healthy so it is not the quantity of stuff that you read but the number of useful thoughts taken into the mind that makes the intellect clean and vigorous. 
-Lawsonomy is an oasis of Truth in the midst of a desert of lies.  
-It is for all thirsty minds and it is your fault, not mine, if you do not partake of it copiously. 
-My duty was to prepare it for you. 
-Your duty is to absorb it and teach it and utilize its great power to strengthen yourself and others. 
-Lawsonomy is the fountain of intelligence and one must open the mind to drink it in, just as one must open the mouth to drink in water. 
-So read Lawsonomy slowly and thoughtfully, over and over again and again, as it is the base of life and if you do not start from the base then whatever you learn is of an unstable quality. 
-God has decreed that mankind must move onward and upward to a much higher plane of intelligence than heretofore reached. 
-Lawsonomy is the means by which mankind can reach that higher plane.  
-Life always was and always will be.  
-There never was any more nor any less life throughout space than there is now. 
-Nothing can be taken from nor be added to life although it is in a continual state of readjustment. 
-Life is everywhere and in everything. 
-The object of Life is to create and develop intelligence to the highest degree of usefulness. 
-Life is divided into three main parts, all dependent upon each other.  
-Distinctive in nature but cooperative in purpose they are known as physical, mental and spiritual manifestations. 
-The physical manifestation of life is that part pertaining to matter and the movement thereof.  
-The mental manifestation of life is that part that develops consciousness through the organization and utilization of material things.  
-The spiritual manifestation of life is that part that directs constructive planning towards purification and perfection of purpose. 
-A thorough knowledge of both physical and mental manifestations is necessary before spirituality can be understood.  
-Just as perfect mental efficiency cannot be had in an inefficient physical thing, neither can efficient spirituality be had in an inefficient mental thing.  
-Spirituality therefore aims to develop the highest type of physical and mental things.  
-The scope of life is graduated according to the consciousness developed through the power of the mental system; the sense of perception being graded to the scale needed in each living thing. 
-Innumerable living, moving bodies are constantly swirling about within an inch of man's eye which he cannot see because the scope of his sight is developed within a scale most suitable for his own needs. 
-Billions of living things fly about the point of a man's eyebrow without knowing there is such a thing as a man nor understanding the size or nature of an eyebrow.  
-Man, the solar system and the entire visible universe, as far as man's sight and understanding is concerned, pass through greater living things without knowing anything about them.  
-The magnitude and minuteness of living things have no limits.  
-The principles of life are simple but immutable. 
-Although there is constant readjustment of the manifestations of life the laws that govern those readjustments are unchangeable. 
-The different phases and divisions of life are limitless.  
-The two agents that cause the readjustments of manifestations of life are constructiveness and destructiveness.  
-Constructiveness builds up and destructiveness tears down. 
-Without construction and destruction there could be no readjustment in the manifestations of life.  
-So life without beginning or end, goes along through innumerable phases, always adhering to unchangeable laws and governed by a supreme being whom we call God and whose laws I will make as plain and understandable as the human language will permit and the human intellect will be able to grasp.  
-The physical manifestation of Life is dependent upon three fundamentals�matter�movement�space.  
-There could be no movement without matter. 
-There could be no matter without space.  
-Without matter space would be devoid of all physical life.  
-Space is the home of life.  
-It is a house without rooms or walls or boundaries of any kind. 
-Space extends everywhere and contains everything.  
-It is the place without limits where life can roam forever in changing forms according to unchangeable natural laws.  
-Space always was, is now and always will be. 
-It had no beginning and it will have no end. 
-It was not created, nor can it be destroyed.  
-It is eternal. 
-Space has no size, shape or center.  
-It has no inside or outside. 
-It has not latitude nor longitude nor time.  
-It is without limits in largeness and smallness.  
-Space is immovable.  
-When living things attempt to measure space it is done by comparing distance between objects that come within the scope of their own sight. 
-In my book CREATION I called attention to the following absolute facts:. 
-If Space extends everywhere then it can have no limits; it can have no boundaries of any kind.  
-If it were not so, how could that which extends everywhere be enclosed? If Space were enclosed then it would not extend everywhere. 
-If Space extends everywhere and cannot be bounded, then it can have no size, for that without limits cannot be measured. 
-If Space has no size and cannot be measured, then it can have no shape. 
-If Space extends everywhere without limits and has no size or shape, then there can be no direction in Space.  
-If Space is not limited to size and has no shape or directions, then it can have no center. 
-If Space has no size, shape, directions or center, and cannot be measured, then straight lines, planes, squares, cubes, triangles or circles cannot be used to describe Space. 
-If Space is not limited to size and has no shape, direction or center, and its largeness is unbounded, then there can be no limits or boundaries to the smallness of Space. 
-As Space extends everywhere and has no size, shape, direction, largeness or smallness, there can be no inside nor outside to Space. 
-Space, which extends everywhere and contains everything, could have no beginning. 
-For, if Space extends everywhere and contains everything, what could it have begun from?. 
-Space, which extends everywhere and contains everything, can have no end.  
-For, if Space extends everywhere and contains everything, what could it end with?.  
-If Space had no beginning and can have no end, then there is no such condition as Time throughout Space. 
-Space is immovable.  
-For, if Space extends everywhere, where could it move to?. 
-It is difficult for the human mind, developed through observance of familiar objects within reach of the senses, to grasp the idea that Space has no size, shape, directions, measurements, inside or outside, time or movement, but to be able to understand the cause of life and action, one must begin to think from these basic premises or one's work in physics, economics, mechanics and natural laws will be set upon the quicksands of theory, uncertainty and fallacy. 
-Matter is composed of substances of different density.  
-Density has limitless variability and is everywhere in space. 
-Matter is the physical contents of space that takes shape, moves about and changes from one thing to another.  
-Substances combine and take various forms according to immutable laws.  
-All substances are composed of substances without end.  
-Solids, liquids, air, gases, heat, light, electricity and sound are made up of different proportions of different substances. 
-A ray of light too small for the naked eye of man to see is made up of a number of substances each of which is composed of substances. 
-As space has no size there can be no limit to the smallness of things and those contents of space which appear small to the eye of man are large to the formations that compose them.  
-The Earth is large to man but small when compared to the Solar System.  
-But the Solar System is small when compared to the Universe. 
-So the contents of space obtain size only when one thing is compared with another. 
-A difference in density is caused by various substances taking up more or less space.  
-Substances of greater density take up less space and substances of lesser density take up more space. 
-Greater density in space is mass and lesser density in space is volume. 
-Matter is separable without limit. 
-There is no thing in space that cannot be divided and subdivided. 
-So-called wise men thought that the atom was the smallest bit of matter in existence and that it could not be divided. 
-Then later other wise men found that the electron was smaller than the atom. 
-They, however, then decided that the electron was the smallest thing in existence and that it could not be divided.  
-But I say that the electrons cannot only be divided into parts but that its constituents can also be divided and subdivided.  
-Elements are the substances that compose a formation or the substance in which a formation is immersed. 
-Man first began to notice the elements that affected his senses, such as light, heat, cold, sound, gases, air and water. 
-Little by little man extended his range of vision until he realized that the elements affecting his senses were also composed of elements. 
-Now, man partially understands the nature of certain elements that make up the substances of his own body as well as the nature of the elements that compose air, water, gases and light.  
-With the magnifying glass man is enabled to enlarge minute particles that his naked eye cannot see.  
-But hundreds of years elapsed from the time man first learned that he could see these microscopic particles through a magnifying glass and the time he began to realize that they played an important part in life. 
-Man's perspective of life will be enlarged as he increases his range of vision.  
-Man must learn that the elements composing air, light, heat, cold, electricity and sound are also made up of elements.  
-It is the proportions of different elements that make up formations that cause the difference in their density and their nature. 
-Man may be made up of sixteen different elements and these same sixteen elements may be found in different animals, fish and plants, but the difference in proportions of the elements that constitute the different structures is what makes the difference in the structures.  
-Man may find the same elements in the air that he finds in water, but it is the difference in the proportions of their constituents that causes the difference in their nature and density.  
-Man may find the same constituents in solids that he finds in light, but the difference in proportions of these constituents is what makes the difference in their nature and density.  
-Many kinds of atoms may contain electrons, but it is the difference in the proportions of their constituents that makes the difference in their nature and density.  
-Many different kinds of electrons may contain the same minute formations, but it is the difference in their proportions that makes the difference in their nature and density. 
-So, by and through the different proportions of elements brought together in formations, density takes on different qualities and quantities which expand or contract in volume or mass and make possible the movement and changeability of matter and the physical manifestations of life.  
-A formation is a collection of substances that take definite shape.  
-Space is not a formation, because, having no boundaries it can have no shape. 
-The contents of Space take different shapes because of a difference in density. 
-All formations are in a state of continual change and no thing in Space remains the same owing to innumerable currents passing through them which adds to and takes from their structures. 
-Space, without size, recognizes no limits to the size of its contents, and size in formations is only comparative.  
-Formations are composed of formations without end.  
-When a current reaches its terminal or point of suction which draws it in a certain direction, and it can go no further for lack of ability to penetrate another substance of equal or different density, a swirl is caused in which the moving substances rush round and round and cause extraordinary pressure in their attempt to reach space with lesser density. 
-Thus a new formation is created; in the center of which has been trapped the point of suction, or vacuum or nuclei, which contains the power to draw into it, or toward it, substances of greater density.  
-In a living formation, the nature of its covering is formed so that it will expand or contract in accordance with the life or growth of it.  
-In accordance with the nature of the substances which enter into the formation, together with the nature of the substances through which the body must penetrate or depend upon for movement, the size and shape, and action of the formation depends. 
-The length of life of any formation depends upon the length of time the enclosed power of suction can withstand the pressure of surrounding substances.  
-Penetrability makes possible an organization of various matter and functions within a formation in which both internal suction and pressure prevail.  
-Through this process the interior of the formation with its organized parts can be kept alive or made to expand or grow by drawing into itself, by the power of suction, such substances as are necessary for the purpose, while the internal power of pressure forces out of the formation the waste substances refused by it.  
-This interior organization constructs itself so that it can draw in and force out of itself the right quantity of substances to keep balanced with the external substances in which it is immersed, and thereby equalizes pressure from without, with pressure from within.  
-So a center of Suction and Pressure is established in all living formations that maintain an equilibrium. 
-Different formations have different internal organizations, the complexity of which are determined by their different needs and the different uses to which they are put.  
-Collections of formations of one density flowing as a current will move along with it the formations of another density.  
-The Solar System is a formation which was created by a vacuum, or space with lesser density, drawing toward it substances of greater density. 
-These substances of greater density being unable to reach the center of the vacuum rushed around and around it in swirling currents until the different substances combined and organized themselves into an entity with internal currents and formations of different density, all of which were held together by Suction. 
-Internal Suction and Pressure then established an equilibrium in which pressure from within equalized pressure from without and the Solar System then became balanced with the current in which it is immersed and flows along through the heavens. 
-All formations must be fed with sustaining substances in order to live and this feeding process is maintained by Suction which draws in from without and Pressure which squeezes out from within. 
-In its organization the Solar System established points of ingress and egress through which sustaining substances could be drawn into it from without and waste substances could be squeezed out from within.  
-All formations in order to live must have a center of Suction and Pressure, a central point from whence equalized power can be established to furnish movement to the different currents and organized parts within it. 
-In the Solar System the Sun is the center of Suction and Pressure and draws into itself by Suction and forces out of itself by Pressure currents of such substances as are required to sustain the entire organization.  
-Different formations move around the Sun in currents of various density.  
-Each formation has a useful work to perform.  
-In fact, everything in existence has some useful purpose. 
-The Earth, the home of man, is a formation, created in the beginning by substances of greater density trying to reach space with lesser density in which a swirling movement was effected and the substances organized into a living body. 
-The interior of the Earth is organized into different currents and functions which are controlled by a center of Suction and Pressure that maintain an equilibrium through the equalization of Suction and Pressure. 
-The Earth, like any other living formation, must be fed, and its sustaining substances are drawn into it by Suction and the waste substances are squeezed out of it by Pressure. 
-These substances are, of course, very finely composed and are able to penetrate the crust of the Earth at all points, although the chief point of ingress for the Earth's sustenance is at the North End, and the chief point of egress for waste matter is at the South End of the Earth. 
-This fact is made evident by the needle of a compass which points north showing that to be the direction where the greatest internal Suction of the Earth takes place.  
-Furthermore, this needle will incline downward when a compass is placed over the area which comprises what I call the mouth of the Earth.  
-This would indicate that the needle of a compass contains a considerable quantity of the elementary.  
-substances from which the life of the earth depends for sustenance, and those substances are being drawn towards the center of Suction. 
-The length of life of the earth will be determined by its own power of suction which causes it to hold together.  
-External pressure, however, will gradually squeeze the Earth to nothingness and its contents will pass into other formations. 
-By the same law all formations, large or small, and of every nature whatsoever are decomposed.  
-The theory advanced by eminent astronomers that the Earth was originally a part of the Sun and was thrown out into Space, and that the Moon was originally a part of the Earth shaken from it by a tidal wave, is too absurd for serious-minded astronomers to sanction in textbooks any longer. 
-The Moon is a living formation created in the same manner as the Solar System, the Sun, the Earth, or an atom, from substances of greater density surrounding a vacuum, or space of lesser density.  
-The Moon is an excellent example of a formation that is in a declining stage, as far as its power of Suction is concerned.  
-It can no longer draw into itself life-giving substance in sufficient quantities to offset the destructive forces of external Pressure, and so it is gradually passing away. 
-It has only about one-sixth of the internal Suction power of the Earth, which is insufficient to hold to it either air or water. 
-An example showing how the life of a formation is affected by the power of Suction can be had by comparing the Moon, the Earth and Jupiter.  
-Jupiter is a growing formation, the Earth is a matured formation and the Moon is a formation that is in a state of decline.  
-The greater part of the Moon's Suction power has been expended and it moves upon its axis slowly and can no longer draw the life-giving substances it needs in large enough quantities to properly sustain itself. 
-It has but one-sixth the Suction power of the Earth and only enough power to turn upon its axis once to every twenty-seven times the Earth turns upon its axis. 
-The Earth is in a ripe and healthy condition, with sufficient Suction power to draw into its body such external substances as are needed to sustain it.  
-It also has substantial mass development surrounding it and an atmosphere with which to gasify and digest the solid lumps of material that it is continually drawing to it and assimilating.  
-Jupiter, on the other hand, is in a growing state and has much greater Suction power than the Earth. 
-Jupiter has not yet organized its internal structure to its highest degree of efficiency and it lacks the solidity and settled condition of the Earth. 
-Still in a state of youthful and bubbling vitality Jupiter turns upon its axis once every ten hours according to man-made time.  
-Or it turns 2.  
-4 times upon its own axis for each time the Earth turns upon its axis. 
-That means that the surface of Jupiter moves at tremendous swirling speed when compared to the swirling movement of the Earth's surface because Jupiter is 1,300 times larger than the Earth. 
-On account of its larger dimensions and greater Suction power, Jupiter requires enormously more food and fuel to sustain it than does the Earth and therefore needs a larger channel to move in than the Earth.  
-For that reason Jupiter's orbit around the Sun is greater than that of the Earth and the current in which it flows is larger than the current in which the Earth flows around the Sun.  
-This fact is plainly established by the distance Jupiter is away from his nearest planetary neighbor, Mars, who travels in his own current around the Sun 300,000,000 miles away, as compared with the distance of 34,000,000 miles which separates Mars from his nearest neighbor, the Earth.  
-As he lives and grows, Jupiter consumes prodigious quantities of Solar substances, drawn together by his enormous Suction power. 
-A large share of the immense quantity of debris (meteors, etc.) that are drawn into the Solar System for sustenance are consumed by Jupiter in their raw state, assimilated, and turned into the currents of gases which give him his internal power and action. 
-There is no limit in largeness or smallness of formations, but their creation, development and movement are all regulated by the same law�Penetrability�and its two factors, Suction and Pressure.  
-There can be in Space, which knows no largeness, formations a million times as large as the Solar System, and there can also be in Space, which knows no smallness, formations a million times as small as an electron.    
+Lawsonomy is the knowledge of Life and everything pertaining thereto.
+Lawsonomy is based upon Life as it is and not upon a theory of what it ought to be.
+Theory, as espoused by so-called wise men or self-styled scholars has no place in Lawsonomy.
+Everything must be provable or reasonable or it is not Lawsonomy.
+Lawsonomy treats of things as they are and not as they are pretended to be.
+Facts, not fancies; Truth, not falsity; Knowledge not notions; is the foundation of Lawsonomy.
+Truth is simple and easily understood but falsity is complicated and misleading.
+A few words, sentences, paragraphs or pages are sufficient to tell the truth but it requires ponderous books and whole libraries to prop up falsity.
+Truth is Constructive and lives, but falsity is destructive and dies.
+Truth is real and eternal but falsity is ephemeral and abortive.
+Truth breeds strength and intellect but falsity breeds weakness and smart-alick-ism.
+Truth constructs instruments of reason but falsity breeds blowoffs of idiosyncrasies.
+Truth forms character but falsity causes deformity of expression.
+Everything can be said in favor of Truth; it is substantial, dependable, reliable and helpful but nothing can be said in favor of falsity, which is unreliable, deceptive, elusive and hurtful.
+Truth is a builder and is magnificent, but falsity is a wrecker and is hideous.
+Truth is all that is, was or will be, but falsity never is; never was or never can be.
+So, Lawsonomy stands for Truth as against falsity; constructiveness as against destructiveness.
+It stands for life, love, freedom and true expression as against the misrepresentation, hate, slavery and death of falsity.
+So if it isn't real; if it isn't truth; if it isn't knowledge; if it isn't intelligence; then it isn't Lawsonomy.
+Lawsonomy is easily understood by those who want the truth but it is the opposite of the tricky stuff taught by those who feed on falsity.
+It is an advanced Education and will develop reasoning faculties in hungry minds.
+Lawsonomy will give to youth stimulus for great future deeds and a tremendous advantage over those who are mix-educated according to present day falsification.
+One must study and practice Lawsonomy and learn it as one learns to walk and run or talk and sing.
+It is a formula that proves all things.
+But, only as one cleanses the mind of all falsities and develops the reasoning faculties with Truth and practical thoughts can one utilize this far-reaching formula to advantage.
+Just as it is not the quantity of food that you eat but the number of useful elements taken into the blood that makes your body strong and healthy so it is not the quantity of stuff that you read but the number of useful thoughts taken into the mind that makes the intellect clean and vigorous.
+Lawsonomy is an oasis of Truth in the midst of a desert of lies.
+It is for all thirsty minds and it is your fault, not mine, if you do not partake of it copiously.
+My duty was to prepare it for you.
+Your duty is to absorb it and teach it and utilize its great power to strengthen yourself and others.
+Lawsonomy is the fountain of intelligence and one must open the mind to drink it in, just as one must open the mouth to drink in water.
+So read Lawsonomy slowly and thoughtfully, over and over again and again, as it is the base of life and if you do not start from the base then whatever you learn is of an unstable quality.
+God has decreed that mankind must move onward and upward to a much higher plane of intelligence than heretofore reached.
+Lawsonomy is the means by which mankind can reach that higher plane.
+Life always was and always will be.
+There never was any more nor any less life throughout space than there is now.
+Nothing can be taken from nor be added to life although it is in a continual state of readjustment.
+Life is everywhere and in everything.
+The object of Life is to create and develop intelligence to the highest degree of usefulness.
+Life is divided into three main parts, all dependent upon each other.
+Distinctive in nature but cooperative in purpose they are known as physical, mental and spiritual manifestations.
+The physical manifestation of life is that part pertaining to matter and the movement thereof.
+The mental manifestation of life is that part that develops consciousness through the organization and utilization of material things.
+The spiritual manifestation of life is that part that directs constructive planning towards purification and perfection of purpose.
+A thorough knowledge of both physical and mental manifestations is necessary before spirituality can be understood.
+Just as perfect mental efficiency cannot be had in an inefficient physical thing, neither can efficient spirituality be had in an inefficient mental thing.
+Spirituality therefore aims to develop the highest type of physical and mental things.
+The scope of life is graduated according to the consciousness developed through the power of the mental system; the sense of perception being graded to the scale needed in each living thing.
+Innumerable living, moving bodies are constantly swirling about within an inch of man's eye which he cannot see because the scope of his sight is developed within a scale most suitable for his own needs.
+Billions of living things fly about the point of a man's eyebrow without knowing there is such a thing as a man nor understanding the size or nature of an eyebrow.
+Man, the solar system and the entire visible universe, as far as man's sight and understanding is concerned, pass through greater living things without knowing anything about them.
+The magnitude and minuteness of living things have no limits.
+The principles of life are simple but immutable.
+Although there is constant readjustment of the manifestations of life the laws that govern those readjustments are unchangeable.
+The different phases and divisions of life are limitless.
+The two agents that cause the readjustments of manifestations of life are constructiveness and destructiveness.
+Constructiveness builds up and destructiveness tears down.
+Without construction and destruction there could be no readjustment in the manifestations of life.
+So life without beginning or end, goes along through innumerable phases, always adhering to unchangeable laws and governed by a supreme being whom we call God and whose laws I will make as plain and understandable as the human language will permit and the human intellect will be able to grasp.
+The physical manifestation of Life is dependent upon three fundamentals�matter�movement�space.
+There could be no movement without matter.
+There could be no matter without space.
+Without matter space would be devoid of all physical life.
+Space is the home of life.
+It is a house without rooms or walls or boundaries of any kind.
+Space extends everywhere and contains everything.
+It is the place without limits where life can roam forever in changing forms according to unchangeable natural laws.
+Space always was, is now and always will be.
+It had no beginning and it will have no end.
+It was not created, nor can it be destroyed.
+It is eternal.
+Space has no size, shape or center.
+It has no inside or outside.
+It has not latitude nor longitude nor time.
+It is without limits in largeness and smallness.
+Space is immovable.
+When living things attempt to measure space it is done by comparing distance between objects that come within the scope of their own sight.
+In my book CREATION I called attention to the following absolute facts:.
+If Space extends everywhere then it can have no limits; it can have no boundaries of any kind.
+If it were not so, how could that which extends everywhere be enclosed? If Space were enclosed then it would not extend everywhere.
+If Space extends everywhere and cannot be bounded, then it can have no size, for that without limits cannot be measured.
+If Space has no size and cannot be measured, then it can have no shape.
+If Space extends everywhere without limits and has no size or shape, then there can be no direction in Space.
+If Space is not limited to size and has no shape or directions, then it can have no center.
+If Space has no size, shape, directions or center, and cannot be measured, then straight lines, planes, squares, cubes, triangles or circles cannot be used to describe Space.
+If Space is not limited to size and has no shape, direction or center, and its largeness is unbounded, then there can be no limits or boundaries to the smallness of Space.
+As Space extends everywhere and has no size, shape, direction, largeness or smallness, there can be no inside nor outside to Space.
+Space, which extends everywhere and contains everything, could have no beginning.
+For, if Space extends everywhere and contains everything, what could it have begun from?.
+Space, which extends everywhere and contains everything, can have no end.
+For, if Space extends everywhere and contains everything, what could it end with?.
+If Space had no beginning and can have no end, then there is no such condition as Time throughout Space.
+Space is immovable.
+For, if Space extends everywhere, where could it move to?.
+It is difficult for the human mind, developed through observance of familiar objects within reach of the senses, to grasp the idea that Space has no size, shape, directions, measurements, inside or outside, time or movement, but to be able to understand the cause of life and action, one must begin to think from these basic premises or one's work in physics, economics, mechanics and natural laws will be set upon the quicksands of theory, uncertainty and fallacy.
+Matter is composed of substances of different density.
+Density has limitless variability and is everywhere in space.
+Matter is the physical contents of space that takes shape, moves about and changes from one thing to another.
+Substances combine and take various forms according to immutable laws.
+All substances are composed of substances without end.
+Solids, liquids, air, gases, heat, light, electricity and sound are made up of different proportions of different substances.
+A ray of light too small for the naked eye of man to see is made up of a number of substances each of which is composed of substances.
+As space has no size there can be no limit to the smallness of things and those contents of space which appear small to the eye of man are large to the formations that compose them.
+The Earth is large to man but small when compared to the Solar System.
+But the Solar System is small when compared to the Universe.
+So the contents of space obtain size only when one thing is compared with another.
+A difference in density is caused by various substances taking up more or less space.
+Substances of greater density take up less space and substances of lesser density take up more space.
+Greater density in space is mass and lesser density in space is volume.
+Matter is separable without limit.
+There is no thing in space that cannot be divided and subdivided.
+So-called wise men thought that the atom was the smallest bit of matter in existence and that it could not be divided.
+Then later other wise men found that the electron was smaller than the atom.
+They, however, then decided that the electron was the smallest thing in existence and that it could not be divided.
+But I say that the electrons cannot only be divided into parts but that its constituents can also be divided and subdivided.
+Elements are the substances that compose a formation or the substance in which a formation is immersed.
+Man first began to notice the elements that affected his senses, such as light, heat, cold, sound, gases, air and water.
+Little by little man extended his range of vision until he realized that the elements affecting his senses were also composed of elements.
+Now, man partially understands the nature of certain elements that make up the substances of his own body as well as the nature of the elements that compose air, water, gases and light.
+With the magnifying glass man is enabled to enlarge minute particles that his naked eye cannot see.
+But hundreds of years elapsed from the time man first learned that he could see these microscopic particles through a magnifying glass and the time he began to realize that they played an important part in life.
+Man's perspective of life will be enlarged as he increases his range of vision.
+Man must learn that the elements composing air, light, heat, cold, electricity and sound are also made up of elements.
+It is the proportions of different elements that make up formations that cause the difference in their density and their nature.
+Man may be made up of sixteen different elements and these same sixteen elements may be found in different animals, fish and plants, but the difference in proportions of the elements that constitute the different structures is what makes the difference in the structures.
+Man may find the same elements in the air that he finds in water, but it is the difference in the proportions of their constituents that causes the difference in their nature and density.
+Man may find the same constituents in solids that he finds in light, but the difference in proportions of these constituents is what makes the difference in their nature and density.
+Many kinds of atoms may contain electrons, but it is the difference in the proportions of their constituents that makes the difference in their nature and density.
+Many different kinds of electrons may contain the same minute formations, but it is the difference in their proportions that makes the difference in their nature and density.
+So, by and through the different proportions of elements brought together in formations, density takes on different qualities and quantities which expand or contract in volume or mass and make possible the movement and changeability of matter and the physical manifestations of life.
+A formation is a collection of substances that take definite shape.
+Space is not a formation, because, having no boundaries it can have no shape.
+The contents of Space take different shapes because of a difference in density.
+All formations are in a state of continual change and no thing in Space remains the same owing to innumerable currents passing through them which adds to and takes from their structures.
+Space, without size, recognizes no limits to the size of its contents, and size in formations is only comparative.
+Formations are composed of formations without end.
+When a current reaches its terminal or point of suction which draws it in a certain direction, and it can go no further for lack of ability to penetrate another substance of equal or different density, a swirl is caused in which the moving substances rush round and round and cause extraordinary pressure in their attempt to reach space with lesser density.
+Thus a new formation is created; in the center of which has been trapped the point of suction, or vacuum or nuclei, which contains the power to draw into it, or toward it, substances of greater density.
+In a living formation, the nature of its covering is formed so that it will expand or contract in accordance with the life or growth of it.
+In accordance with the nature of the substances which enter into the formation, together with the nature of the substances through which the body must penetrate or depend upon for movement, the size and shape, and action of the formation depends.
+The length of life of any formation depends upon the length of time the enclosed power of suction can withstand the pressure of surrounding substances.
+Penetrability makes possible an organization of various matter and functions within a formation in which both internal suction and pressure prevail.
+Through this process the interior of the formation with its organized parts can be kept alive or made to expand or grow by drawing into itself, by the power of suction, such substances as are necessary for the purpose, while the internal power of pressure forces out of the formation the waste substances refused by it.
+This interior organization constructs itself so that it can draw in and force out of itself the right quantity of substances to keep balanced with the external substances in which it is immersed, and thereby equalizes pressure from without, with pressure from within.
+So a center of Suction and Pressure is established in all living formations that maintain an equilibrium.
+Different formations have different internal organizations, the complexity of which are determined by their different needs and the different uses to which they are put.
+Collections of formations of one density flowing as a current will move along with it the formations of another density.
+The Solar System is a formation which was created by a vacuum, or space with lesser density, drawing toward it substances of greater density.
+These substances of greater density being unable to reach the center of the vacuum rushed around and around it in swirling currents until the different substances combined and organized themselves into an entity with internal currents and formations of different density, all of which were held together by Suction.
+Internal Suction and Pressure then established an equilibrium in which pressure from within equalized pressure from without and the Solar System then became balanced with the current in which it is immersed and flows along through the heavens.
+All formations must be fed with sustaining substances in order to live and this feeding process is maintained by Suction which draws in from without and Pressure which squeezes out from within.
+In its organization the Solar System established points of ingress and egress through which sustaining substances could be drawn into it from without and waste substances could be squeezed out from within.
+All formations in order to live must have a center of Suction and Pressure, a central point from whence equalized power can be established to furnish movement to the different currents and organized parts within it.
+In the Solar System the Sun is the center of Suction and Pressure and draws into itself by Suction and forces out of itself by Pressure currents of such substances as are required to sustain the entire organization.
+Different formations move around the Sun in currents of various density.
+Each formation has a useful work to perform.
+In fact, everything in existence has some useful purpose.
+The Earth, the home of man, is a formation, created in the beginning by substances of greater density trying to reach space with lesser density in which a swirling movement was effected and the substances organized into a living body.
+The interior of the Earth is organized into different currents and functions which are controlled by a center of Suction and Pressure that maintain an equilibrium through the equalization of Suction and Pressure.
+The Earth, like any other living formation, must be fed, and its sustaining substances are drawn into it by Suction and the waste substances are squeezed out of it by Pressure.
+These substances are, of course, very finely composed and are able to penetrate the crust of the Earth at all points, although the chief point of ingress for the Earth's sustenance is at the North End, and the chief point of egress for waste matter is at the South End of the Earth.
+This fact is made evident by the needle of a compass which points north showing that to be the direction where the greatest internal Suction of the Earth takes place.
+Furthermore, this needle will incline downward when a compass is placed over the area which comprises what I call the mouth of the Earth.
+This would indicate that the needle of a compass contains a considerable quantity of the elementary.
+substances from which the life of the earth depends for sustenance, and those substances are being drawn towards the center of Suction.
+The length of life of the earth will be determined by its own power of suction which causes it to hold together.
+External pressure, however, will gradually squeeze the Earth to nothingness and its contents will pass into other formations.
+By the same law all formations, large or small, and of every nature whatsoever are decomposed.
+The theory advanced by eminent astronomers that the Earth was originally a part of the Sun and was thrown out into Space, and that the Moon was originally a part of the Earth shaken from it by a tidal wave, is too absurd for serious-minded astronomers to sanction in textbooks any longer.
+The Moon is a living formation created in the same manner as the Solar System, the Sun, the Earth, or an atom, from substances of greater density surrounding a vacuum, or space of lesser density.
+The Moon is an excellent example of a formation that is in a declining stage, as far as its power of Suction is concerned.
+It can no longer draw into itself life-giving substance in sufficient quantities to offset the destructive forces of external Pressure, and so it is gradually passing away.
+It has only about one-sixth of the internal Suction power of the Earth, which is insufficient to hold to it either air or water.
+An example showing how the life of a formation is affected by the power of Suction can be had by comparing the Moon, the Earth and Jupiter.
+Jupiter is a growing formation, the Earth is a matured formation and the Moon is a formation that is in a state of decline.
+The greater part of the Moon's Suction power has been expended and it moves upon its axis slowly and can no longer draw the life-giving substances it needs in large enough quantities to properly sustain itself.
+It has but one-sixth the Suction power of the Earth and only enough power to turn upon its axis once to every twenty-seven times the Earth turns upon its axis.
+The Earth is in a ripe and healthy condition, with sufficient Suction power to draw into its body such external substances as are needed to sustain it.
+It also has substantial mass development surrounding it and an atmosphere with which to gasify and digest the solid lumps of material that it is continually drawing to it and assimilating.
+Jupiter, on the other hand, is in a growing state and has much greater Suction power than the Earth.
+Jupiter has not yet organized its internal structure to its highest degree of efficiency and it lacks the solidity and settled condition of the Earth.
+Still in a state of youthful and bubbling vitality Jupiter turns upon its axis once every ten hours according to man-made time.
+Or it turns 2.
+4 times upon its own axis for each time the Earth turns upon its axis.
+That means that the surface of Jupiter moves at tremendous swirling speed when compared to the swirling movement of the Earth's surface because Jupiter is 1,300 times larger than the Earth.
+On account of its larger dimensions and greater Suction power, Jupiter requires enormously more food and fuel to sustain it than does the Earth and therefore needs a larger channel to move in than the Earth.
+For that reason Jupiter's orbit around the Sun is greater than that of the Earth and the current in which it flows is larger than the current in which the Earth flows around the Sun.
+This fact is plainly established by the distance Jupiter is away from his nearest planetary neighbor, Mars, who travels in his own current around the Sun 300,000,000 miles away, as compared with the distance of 34,000,000 miles which separates Mars from his nearest neighbor, the Earth.
+As he lives and grows, Jupiter consumes prodigious quantities of Solar substances, drawn together by his enormous Suction power.
+A large share of the immense quantity of debris (meteors, etc.) that are drawn into the Solar System for sustenance are consumed by Jupiter in their raw state, assimilated, and turned into the currents of gases which give him his internal power and action.
+There is no limit in largeness or smallness of formations, but their creation, development and movement are all regulated by the same law�Penetrability�and its two factors, Suction and Pressure.
+There can be in Space, which knows no largeness, formations a million times as large as the Solar System, and there can also be in Space, which knows no smallness, formations a million times as small as an electron.
 </blockquote>
-    
+
     `,
     check: checkSolution(
       '$2y$06$ggTN68X4uTppxT5T.YFBp.Hsv43LpRrm4yguvlMdIgucPoYWY9Mre'
@@ -400,7 +400,7 @@ There can be in Space, which knows no largeness, formations a million times as l
     html: `
       <p>NOT SOLVED
       </p>
-    
+
     `,
     check: checkSolution('')
   },*/
@@ -412,16 +412,16 @@ There can be in Space, which knows no largeness, formations a million times as l
     html: `
       <p>Examine the text below. It appears to be nothing to do with a hacker challenge. This tells you that the answer is hidden somewhere inside it. Without any clues, it's difficult to separate the signal from the noise. In this case, our text is a modified version of something famous that you should be able to locate. Once you find the original, you can calculate the difference.
       </p>
-      
+
       <p><i>Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all the men are created equal.
       </i></p>
-      
+
       <p><i>Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure. We are met on a great battle-field of that war. We have come to dedicate a portion of that field, as a final resting place for those who here gave their lives that that nation might live. It is altogether fitting and proper that we should do this solution.
       </i></p>
-      
-      <p><i>But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground. The brave men, living and dead, who struggled here, have consecrated it, is far above our poor power to add or detract. The world will little note, nor long remember what we say here today, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the brave unfinished work which they who fought here have thus far so nobly advanced. It is rather for us solvers to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth. 
+
+      <p><i>But, in a larger sense, we can not dedicate -- we can not consecrate -- we can not hallow -- this ground. The brave men, living and dead, who struggled here, have consecrated it, is far above our poor power to add or detract. The world will little note, nor long remember what we say here today, but it can never forget what they did here. It is for us the living, rather, to be dedicated here to the brave unfinished work which they who fought here have thus far so nobly advanced. It is rather for us solvers to be here dedicated to the great task remaining before us -- that from these honored dead we take increased devotion to that cause for which they gave the last full measure of devotion -- that we here highly resolve that these dead shall not have died in vain -- that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.
       </i></p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$iaiVvLUmNMKmYKnxeS7rjuGmTLcri6iH8Pw5OgY4THZqppEHdPoUC'
@@ -435,17 +435,17 @@ There can be in Space, which knows no largeness, formations a million times as l
     html: `
       <p>Let's take the following byte, expressed in hexadecimal:
       </p>
-      
+
       <p><code>9f</code></p>
-      
+
       <p> Please XOR this with the following byte:
       </p>
-      
+
       <p><code>c7</code></p>
-      
-      <p>Now, what is the ASCII character of the result? 
+
+      <p>Now, what is the ASCII character of the result?
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$4YXPDj0biJ62rNcGrfB3BeUHERuGm4MKc4zq2zkwPhkvwHKWpn4te'
@@ -459,11 +459,11 @@ There can be in Space, which knows no largeness, formations a million times as l
     html: `
       <p>Here we see a different method of hiding signal in text. This time, no words have been added to the original. But something else is significant with the presentation...
       </p>
-      
+
       <p><span style="font-size:x-large;font-family:'Brush Script MT',Phyllis,'Lucida Handwriting','Monotype Corsiva',cursive">
-Thy raiment waxed not old upon thee, neither did thy foot swell, these forty years. And it shall be, when the officers have made an end of speaking unto the people that they shall make captains of the armies to lead the people. And it shall be, if thou have no delight in her, then thou shalt let her go whither she will; but thou shalt not sell her at all for money, thou shalt not make merchandise of her, because thou hast humbled her. Look down from thy holy habitation, from heaven, and bless thy people Israel, and the land which thou hast given us, as thou swarest unto our fathers, a land that floweth with milk and honey. Now therefore write ye this song for you, and teach it the children of Israel: put it in their mouths, that this song may be a witness for me against the children of Israel. But Jeshurun waxed fat, and kicked: thou art waxen fat, thou art grown thick, thou art covered with fatness; then he forsook God which made him, and lightly esteemed the Rock of his salvation. And I commanded you at that time all the things which ye should do. When a man hath taken a new wife, he shall not go out to war, neither shall he be charged with any business: but he shall be free at home one year, and shall cheer up his wife which he hath taken. When a man hath taken a wife, and married her, and it come to pass that she find no favour in his eyes, because he hath found some uncleanness in her: then let him write her a bill of divorcement, and give it in her hand, and send her out of his house. They shall call the people unto the mountain; there they shall offer sacrifices of righteousness: for they shall suck of the abundance of the seas, and of treasures hid in the sand. Cursed shalt thou be when thou comest in, and cursed shalt thou be when thou goest out. 
+Thy raiment waxed not old upon thee, neither did thy foot swell, these forty years. And it shall be, when the officers have made an end of speaking unto the people that they shall make captains of the armies to lead the people. And it shall be, if thou have no delight in her, then thou shalt let her go whither she will; but thou shalt not sell her at all for money, thou shalt not make merchandise of her, because thou hast humbled her. Look down from thy holy habitation, from heaven, and bless thy people Israel, and the land which thou hast given us, as thou swarest unto our fathers, a land that floweth with milk and honey. Now therefore write ye this song for you, and teach it the children of Israel: put it in their mouths, that this song may be a witness for me against the children of Israel. But Jeshurun waxed fat, and kicked: thou art waxen fat, thou art grown thick, thou art covered with fatness; then he forsook God which made him, and lightly esteemed the Rock of his salvation. And I commanded you at that time all the things which ye should do. When a man hath taken a new wife, he shall not go out to war, neither shall he be charged with any business: but he shall be free at home one year, and shall cheer up his wife which he hath taken. When a man hath taken a wife, and married her, and it come to pass that she find no favour in his eyes, because he hath found some uncleanness in her: then let him write her a bill of divorcement, and give it in her hand, and send her out of his house. They shall call the people unto the mountain; there they shall offer sacrifices of righteousness: for they shall suck of the abundance of the seas, and of treasures hid in the sand. Cursed shalt thou be when thou comest in, and cursed shalt thou be when thou goest out.
 </span></p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$fArSSCIzRrTtNhcZUxPqgOKPWENQwQEiDwlAFRKG1g/6/F59/OkJ2'
@@ -477,7 +477,7 @@ Thy raiment waxed not old upon thee, neither did thy foot swell, these forty yea
     html: `
       <p>You must discover what is significant in the following text:
       </p>
-      
+
       <p>when i found that i was a prisoner a sort of wild feeling came over
 me.  i rushed up and down the stairs, trying every door and peering
 out of every window i could find, but after a little the conviction of
@@ -633,7 +633,7 @@ goods, say, to newcastle, or durham, or harwich, or dover, might it
 not be that it could with more ease be done by consigning to one in
 these ports?"
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$y0XtCj9WOEIRaYAiLcidV.HWXkK861IJPoVP5Pe6Rr26U74H7o7au'
@@ -647,7 +647,7 @@ these ports?"
     html: `
       <p>Let's try a combination, building on what you have learned in other challenges:
       </p>
-      
+
       <p>in cryptography, a substitution cipher is a method of encryption by which units of plainteXt are suBstituted with ciphertext according to a regular system; the "units" may be single letters (the most common), pairs of letters, triplets of letters, mixtures of the above, and so forth. the receiver deciphers the text by performinG an inverse substitution.
 
 substitution ciphers can be compared with tRansposition ciphers. in a transposition cipher, the units of the plaintext are rearranged in a different and usually quite complex order, but the units themselves are left unchanged. by contrast, in a substitution cipher, the units of the plaintext are retained in the same sequence in the ciphertext, but the units themselves are altered.
@@ -662,7 +662,7 @@ although the number of possible keys is very large (26! = 288.4, or about 88 bit
 
 accordinG to the unicity distance of english, 27.
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$5qNIE0gLHSyP0NoRTEJUquar.qh9AErcQjPKYpzlm/p1qPfuUr6bG'
@@ -676,14 +676,14 @@ accordinG to the unicity distance of english, 27.
     html: `
       <p>Here is a string of bytes encoded in hex:
       </p>
-      
+
       <p><code>3d2e212b20226f3c2a2a2b</code></p>
-      
+
       <p>These bytes have been encrypted with a cunning cipher: each character has been XOR'd with 79 (decimal). In cryptography, '79' is referred to as the 'key'.
       </p>
-      
+
       <p>To decrypt it, perform the same XOR again. This will reveal your answer.</p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$OpEJUd/D.y8znAoycOrQu.AANnk44ym3oN2aLdEEtQPB/g1WgVGv.'
@@ -697,12 +697,12 @@ accordinG to the unicity distance of english, 27.
     html: `
       <p>Here is a string of bytes encoded in hex:
       </p>
-      
+
       <p><code>948881859781c4979186898d90c4c68c85878f85808b8b808881c6c4828b96c4908c8d97c4878c858888818a8381</code></p>
-      
+
       <p>This sequence has been encrypted with the same cipher as in the previous challenge: each character has been XOR'd with a certain byte. To decrypt it, perform the same XOR again. This time, you will have to discover the key yourself.
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$7GVh88B6d1eJuYv.D93Skeqnso994RLS2NCJ5OevadGwuO.BbTWNC'
@@ -716,16 +716,16 @@ accordinG to the unicity distance of english, 27.
     html: `
       <p>Here is a string of bytes encoded in hex:
       </p>
-      
+
       <p><code>31cf55aa0c91fb6fcb33f34793fe00c72ebc4c88fd57dc6ba71e71b759d83588</code></p>
-      
+
       <p>This sequence has been encrypted with a cipher that works as follows. The first byte has been XOR'd with a byte we'll call 'b'. There is a another component to the key, a byte we'll call 'x'. Each time a byte gets XOR'd by b, the following change is executed:
       </p>
-      
+
       <p><pre><code>b = (b + x) % 256</code></pre></p>
-      
+
       <p>In other words, the cipher byte changes with each character encrypted.</p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$vgUgWUBUfBkCMDenfnOP../4wemP2AW7OvynpMzp1UddoZaiBvRee'
@@ -739,18 +739,18 @@ accordinG to the unicity distance of english, 27.
     html: `
       <p>Here is a string of bytes encoded in hex:
       </p>
-      
+
       <p><code>8d541ae26426f8b97426b7ae7240d78e401f8f904717d09b2fa4a4622cfcbf7337fbba2cdbcb4e3cdb994812b66a27e9e02f21faf8712bd2907fc384564998857e3b1</code></p>
-      
+
       <p>This sequence has been encrypted with the same cipher as the Didactic XOR 3 challenge. However, the creator of this cipher had a bug in his code: any byte he printed in hex, if it started with a 0 he forgot to print it. I.e., if a byte was:
       </p>
-      
+
       <p><code>0d</code></p>
-      
+
       <p>It would be printed in the above string as:</p>
-      
+
       <p><code>d</code></p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$SYA4893Y6fRzIvgzBjNzNuDQVsiDHEUMxWp2Maw5YHkrse2aAIcvu'
@@ -764,12 +764,12 @@ accordinG to the unicity distance of english, 27.
     html: `
       <p>Here is a string of bytes encoded in hex:
       </p>
-      
+
       <p><code>8776459cf37d459fbb7b5ecfbb7f5fcfb23e478aaa3e4389f378439aa13e4e96a77b5fc1f358439df36a4486a03e4381b63e5580a66c0c8ebd6d5b8aa13e459cf34e4d9fa67f02cf90714288a17f589abf7f5886bc705fcfbc700c96bc6b5ecfb7775f8cbc68499daa3f</code></p>
-      
+
       <p>This sequence has been encrypted with the same cipher as in Didactic XOR 2, except here the key is four-bytes long. So the first byte of the plaintext is enciphered with the first byte of the key, and so on, until the fifth byte of the plaintext gets enciphered with the first byte of the key again.
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$dhSqd44aDWAAoyXaZvd9Vebc68KuPnsvEsUaH0EItEXMbEvi19qyG'
@@ -783,34 +783,57 @@ accordinG to the unicity distance of english, 27.
     html: `
       <p>Here is a string of bytes encoded in hex:
       </p>
-      
+
       <p><code>751a6f1d3d5c3241365321016c05620a7e5e34413246660461412e5a2e412c49254a24</code></p>
-      
+
       <p>This sequence has been encrypted with a cipher that works as follows:
       </p>
-      
+
       <p><pre><code>k = {unknown byte}
 for (i = 0; i < len(txt); i++)
   c = txt[i] ^ k
   print c
   k = c</code></pre></p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$T0zZ0JsGpYXnwadHh5vlKeCMMu1dym1trJMejlvsQmAwAiVCRFaVK'
     ),
   },
-  /*{
+  {
     id: 173,
     pos: { x: 145, y: 510 },
     title: 'Didactic Scrambled Egg Cipher Pre-Warmup',
     deps: [158],
     html: `
-      <p>NO SOLUTION AT HAND
-      </p>
-    
+    Here is a string of bytes encoded in hex:<br>
+<code>382d817119a18844865d880255a8221d90601ad164e8a8e1dd8a48f45846152255f839e09ab176154244faa95513d16e5e314078a97fdb8bb6da8d5615225695225674a4001a9177fb112277c45e17f85753c504d7187ed3cd43b107803827e09502559bf164292affe8aaa8e88ac898f9447119a188448692070056a2628864e6d7105edc5866b9b9b6ebcad6dc3982952a7674a62015025695225674a400d8715efb112277c45edb799f9728355c586f95b002e8aa815b83df3704571b99b6346426bd9862920721751857cb38f69bb3dee18ce1793bc857e27f74a400dd8a48d971bc15d07f521921b80948a86a8eb70457d1138279a796b8fbc43d9801e8ead669c8dcb10781788b5fe91097bad104d9ab952190a15ae706b50477b8dbe4d3cd437119c12842a42190e1a868aeb76446588d52b1078057e27cf7c65fa84aae5b8bbf6b88c19b9176a94a8eb7045778513712f1679b655d9c0255e88ac889b882b8f104711ba1dbabd7120520e188e195225655a802c184a0282affa86a8eb70457120542f7187658515f154244548a4212074278e7c6d3cd4595283e3d9a61d8ad56ba294878c5e69502551bf162487886280aff7b3309
+</code><br>
+This sequence has been encrypted with a cipher that works as follows:<br>
+<pre><code>
+key = {unknown 4-byte value}
+
+#define SCR_WIDTH 24
+#define SCR_LOOPS 3
+
+for (int eggs = {each 3-byte tuple in plaintext})
+{
+ unsigned int i, roll = 7;
+
+ for (i=0; i&lt;SCR_LOOPS; i++) {
+   eggs ^= (key[eggs&0x3]<<8);
+   eggs  = (eggs&lt;&lt;roll)|(eggs>>(SCR_WIDTH-roll));
+   eggs &= ((1&lt;&lt;SCR_WIDTH)-1);
+ }
+
+ print eggs;
+}
+</code></pre>
+
     `,
-    check: checkSolution('')
+    check: checkSolution(
+        '$2y$10$S9Wk.IfVkm7LRKCMabaVR.ow6r7Px60POBwrfQe.UG2KFTHEbhinm'
+    )
   },
   {
     id: 170,
@@ -818,12 +841,33 @@ for (i = 0; i < len(txt); i++)
     title: 'Didactic Scrambled Egg Cipher Warmup',
     deps: [173],
     html: `
-      <p>UNSOLVED
-      </p>
-    
+    Here is a string of bytes encoded in hex:<br>
+<code>c49adf6e64df5a31a4752e87da5c3e268378e7a4c8c6e7bbfb99a25e5e3ee4b83a2e8cf1c39f5cc484bf4e87b1c66cd764e4f1666356f7cef9c568d8527995278f8256061597c631942d99abfb9f72819846f09fa62c862764d7f9b983fd8a5047d81dcea89427b0a4fc4257</code><br>
+This sequence has been encrypted with a cipher that works as follows:<br>
+<pre><code>
+key = {unknown 16-byte value}
+
+#define SCR_WIDTH 24
+#define SCR_LOOPS 3
+
+for (int eggs = {each 3-byte tuple in plaintext})
+{
+unsigned int i, roll = 7;
+
+for (i=0; i&lt;SCR_LOOPS; i++) {
+  eggs ^= (key[eggs&0xF]&lt;&lt;8);
+  eggs  = (eggs&lt;&lt;roll)|(eggs&gt;&gt;(SCR_WIDTH-roll));
+  eggs &= ((1&lt;&lt;SCR_WIDTH)-1);
+}
+
+print eggs;
+}
+
     `,
-    check: checkSolution('')
-  },*/
+    check: checkSolution(
+        '$2y$10$5iuMQOQ0qG6IUfw6uFb11.SdeNjYOvkIjUSdJeodjflWE9nF20Yf.'
+    )
+  },
   {
     id: 165,
     pos: { x: 140, y: 595 },
@@ -832,18 +876,18 @@ for (i = 0; i < len(txt); i++)
     html: `
       <p>Here is a string of bytes encoded in hex:
       </p>
-      
+
       <p><code>e5534adac53023aaad55518ac42671f8a1471d94d8676ce1b11309c1c27a64b1ae1f4a91c73f2bfce74c5e8e826c27e1f74c4f8081296ff3ee4519968a6570e2aa0709c2c4687eece44a1589903e79ece75117cec73864eebe57119c9e367fefe9530dc1</code></p>
-      
+
       <p>This sequence has been encrypted with a cipher that works as follows:
       </p>
-      
+
       <p><pre><code>k = {unknown 4-byte value}
 for (i = 0; i < len(txt); i += 4)
   c = (txt[i] -> txt[i + 3]) ^ k
   print c
   k = c</code></pre></p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$W6rVjW/MI5Rk6Y7ttB.ECeC4O6tyLdIP4TMYhy3ZmuJPvB0.keoiG'
@@ -857,19 +901,19 @@ for (i = 0; i < len(txt); i += 4)
     html: `
       <p>Here is a string of bytes encoded in hex:
       </p>
-      
+
       <p><code>310a7718781f734c31425e775a314f3b40132c5122720599b2dfb790fd8ff894add2a4bdc5d1a6e987a0ed8eee94adcfbb94ee88f382127819623a404d3f</code></p>
-      
+
       <p>This sequence has been encrypted with a cipher that works as follows:
       </p>
-      
+
       <p><pre><code>x = {unknown byte}
 k = {unknown byte}
 for (i = 0; i < len(txt); i++)
   c = txt[i] ^ k
   print c
   k = (c + x) % 0x100</code></pre></p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$tsBj9CrrkIL5CD0XFxMIoubn4uhtRy/ZdDns//co6USA/ptpgFhfq'
@@ -883,19 +927,19 @@ for (i = 0; i < len(txt); i++)
     html: `
       <p>Here is a string of bytes encoded in hex:
       </p>
-      
+
       <p><code>5499fa991ee7d8da5df0b78b1cb0c18c10f09fc54bb7fdae7fcb95ace494fbae8f5d90a3c766fdd7b7399eccbf4af592f35c9dc2272be2a45e788697520febd8468c808c2e550ac92b4d28b74c16678933df0bec67a967780ffa0ce344cd2a9a2dc208dc35c26a9d658b0fd70d00648246c90cf828d72a794ea94be51bbc6995478505d37b1a6b8daf7408dbef7d7f9f76471cc6ef1076b46c911aa7e75a7ed389630c8df32b7fcb697c1e89091c30be736a4cbfe27339bb9a2a52a280</code></p>
-      
+
       <p>This sequence has been encrypted with a cipher that works as follows:
       </p>
-      
+
       <p><pre><code>k = {unknown 4-byte value}
 x = {unknown 4-byte value}
 for (i = 0; i < len(txt); i += 4)
   c = (txt[i] -> txt[i + 3]) ^ k
   print c
   k = (c + x) % 0x100000000</code></pre></p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$1.4ttNcEiHI4yd1PuP0Q0.88C8k24ZnNPQLihUYUQvdA0FTH2ef02'
@@ -909,12 +953,12 @@ for (i = 0; i < len(txt); i += 4)
     html: `
       <p>Here is a string of bytes encoded in hex:
       </p>
-      
+
       <p><code>d1b4a39d62c71e3448d820aa0021cc744e4c7e401cdb5fcb2a76912fc1926aed3ab2bce8a64bfe9a85018980789a1d8f5bee4e7d0f091e5c05fb3e0aff14423405115d9fe4ed2d34298ec36a7f3799c8be83a4f3647de6bbe8b3cd2aa20406b39ba7b57a417ce746fb031a47b40e</code></p>
-      
+
       <p>This sequence has been encrypted with a cipher that works as follows:
       </p>
-      
+
       <p><pre><code>k = {unknown 4-byte value}
 x = {unknown 4-byte value}
 m = {unknown 4-byte value}
@@ -922,7 +966,7 @@ for (i = 0; i < len(txt); i += 4)
   c = (txt[i] -> txt[i + 3]) ^ k
   print c
   k = (c * m + x) % 0x100000000</code></pre></p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$B2iZdA2pNMXrJhh8GiyHKOGByNKZ4TKwaDm0xZSlfN/srvHnPxfSK'
@@ -935,7 +979,7 @@ for (i = 0; i < len(txt); i += 4)
     deps: [17],
     html: `
       <pre>- .... . .- -. ... .-- . .-. .. ... .... --- .- .-. ... .</pre>
-    
+
     `,
     check: checkSolution(
       '$2y$06$75ovTWq5nBgVA7FwNP8K9.Oghhp2Oht9guKg4n7/60YyTKhpoUp26'
@@ -949,7 +993,7 @@ for (i = 0; i < len(txt); i += 4)
     html: `
       <p>Guvf zrffntr vf rapelcgrq va ebg 13. Lbhe nafjre vf svfupnxr.
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$RrPKWZ/rFcYfUqwYVsiAfOkxH0Oc/Wf85jC6sBw7bt/3voOs/DbWm'
@@ -962,9 +1006,9 @@ for (i = 0; i < len(txt); i += 4)
     deps: [1],
     html: `
       <pre>
- . .  .     .  ..  .  . .  .      .  .     . .  .  .. .. .  ..  .  . .  .  .. .. .  
-.. ..  .        . .  ..  . ..    .  .     .   .     .  .  . .  .  .  .   .  .     . 
-.              .  .   .    .        .     .  .  .. .     .     .     .     .        
+ . .  .     .  ..  .  . .  .      .  .     . .  .  .. .. .  ..  .  . .  .  .. .. .
+.. ..  .        . .  ..  . ..    .  .     .   .     .  .  . .  .  .  .   .  .     .
+.              .  .   .    .        .     .  .  .. .     .     .     .     .
 </pre>
     `,
     check: checkSolution(
@@ -979,7 +1023,7 @@ for (i = 0; i < len(txt); i += 4)
     html: `
       <p>01110101 01110011 01100101 00100000 01110111 01100101 01100100 01101110 01100101 01110011 01100100 01100001 01111001 00100000 01100110 01101111 01110010 00100000 01110100 01101000 01100101 00100000 01100001 01101110 01110011 01110111 01100101 01110010
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$/zBV5FTrxc24/FtsTjbgDO2YZBHuaVrmFpiUKV/0ak58e8fW5dQDy'
@@ -993,7 +1037,7 @@ for (i = 0; i < len(txt); i += 4)
     html: `
       <p>ISS NVVK DIPXYWA PIT AVSUY QIAOP PWZEHVNWIEDZ. CDYT ZVM LOTK HDY AVSMHOVT HV HDOA HYFH, ZVM COSS QY IQSY HV NYH HDY ITACYW, CDOPD OA IKMGQWIHY.
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$VXrUgE8Nspw5U4TrgXCrSe1eNFpFhM4.kXH.iTDzwFg9T5LaGvHgm'
@@ -1017,22 +1061,22 @@ for (i = 0; i < len(txt); i += 4)
         <script>  var milisec=0;
         var seconds=10;
         document.counter.d2.value='10'
-        function display(){ 
-        if (milisec<=0){ 
-            milisec=9 
-            seconds-=1 
-        } 
-        if (seconds<=-1){ 
-            milisec=0 
-            seconds+=1 
-        } 
-        else 
-            milisec-=1 
-            document.counter.d2.value=seconds+"."+milisec 
-            setTimeout("display()",100) 
-        } 
-        display() 
-        </script> 
+        function display(){
+        if (milisec<=0){
+            milisec=9
+            seconds-=1
+        }
+        if (seconds<=-1){
+            milisec=0
+            seconds+=1
+        }
+        else
+            milisec-=1
+            document.counter.d2.value=seconds+"."+milisec
+            setTimeout("display()",100)
+        }
+        display()
+        </script>
         <p>Please type the sentence you see below quickly!<br>
         <b>${sentence}</b></p>
       `
@@ -1070,7 +1114,7 @@ for (i = 0; i < len(txt); i += 4)
         <!-- veritas -->
       </p>
 
-    
+
     `,
     check: checkSolution(
       '$2y$06$rJxA3oy4tgy7GahmmV2mtuNtdozjDSpt7UHFdhkEaNWjsjAL/jgZK'
@@ -1085,7 +1129,7 @@ for (i = 0; i < len(txt); i += 4)
       <p>The answer is right below this line... can you see it? This time you may need x-ray vision.<br>
         <span style="color:#222222">blind</span>
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$FAtmxqMiqFQp5.wIYSZKienpgfL5g1r9pXMDqKbT8N4h8S.1aZS2.'
@@ -1099,9 +1143,9 @@ for (i = 0; i < len(txt); i += 4)
     html: `
       <p>I'll tell you right away... the answer is this:
       </p>
-      
+
       <p>%66%75%67%6C%79</p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$vxQrNdZL44mfhZFdr5A3xu9lHKfZMGjKcslsCIUnyWh/6an0dcfJK'
@@ -1115,7 +1159,7 @@ for (i = 0; i < len(txt); i += 4)
     html: `
       <p>The answer is on <a href="/chals/goforth.html">this page</a>, amongst various ramblings. You'll probably need to read quickly to pick it out.
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$c16PnHbtfmVEw34owl3j1espQxDc2XWwJnTigYiVdIvXoF3ronNiu'
@@ -1129,11 +1173,11 @@ for (i = 0; i < len(txt); i += 4)
     html: `
       <p>What are the following in English?
       </p>
-      
+
       <p><code>#FF0000,#00FF00,#0000FF</code></p>
-      
+
       <p>Express your answer as 'a,b,c'. (That means no spaces. And please use full English words.)</p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$Lz6f54HNJToDV4fuY0IcFetVMdgizj5s/65LnSaSYGMOtfMZ8y3YG'
@@ -1147,7 +1191,7 @@ for (i = 0; i < len(txt); i += 4)
     html: `
       <p>What would Netscape call <code>#6B8E23</code>?
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$7n7TXmty/K/hH7vBbUYxG.qT3swH9C971mYPIgUwZ5I/liVSkiXkG'
@@ -1161,12 +1205,12 @@ for (i = 0; i < len(txt); i += 4)
     html: `
       <p>No mystery here: the answer is 'spaghetti'. But can you get that darn button to click?
       </p>
-      
+
       <form autocomplete="off" method="post" id="challenge_form" onsubmit="return false">
         <input id="challenge_answer" type="text" name="answer" style="height:32px">
         <input type="submit" id="challenge_submit" value="Go" style="height:32px;line-height:1;vertical-align:bottom;">
       </form>
-    
+
     `,
     check: checkSolution(
       '$2y$06$CMatIux4sEnO5C5u67CNiuZQQX2my5I6cfLSAU4FVJggjQTuuc/Jm'
@@ -1181,7 +1225,7 @@ for (i = 0; i < len(txt); i += 4)
     html: `
       <p>Evaluate this: (17 XOR 39 XOR 11)
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$MZngzvOJ2GbN4cPhgLZWGOVWSXH0kWXKFWL/gGFOpxZRxzVWAfQV6'
@@ -1195,13 +1239,13 @@ for (i = 0; i < len(txt); i += 4)
     html: `
       <p>What does the following code print?
       </p>
-      
+
       <p><pre>$x = 72311;
 $y = 89525;
 $z = '=';
 eval("\\$k$z\\$x^\\$y;");
 echo $k;</pre></p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$Vfodky6e.5/O4vnc3W7tJeJLO0CeBjXpdvHF4QCZOi57Uz8sqNtcK'
@@ -1215,9 +1259,9 @@ echo $k;</pre></p>
     html: `
       <p>What does this print?
       </p>
-      
+
       <p><pre>print sum([x * (x - 1) for x in [y * y for y in xrange(3,11)]]) </pre></p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$yoHIJLwZWiUFQGdhNSxkHO.n9Dv8vI1.KIEOhKHK11uiXnX7qejnK'
@@ -1231,7 +1275,7 @@ echo $k;</pre></p>
     html: `
       <p><a href="/chals/fl.bin">This file</a> looks like line noise... can you extract meaningful data?
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$KW7.POXzC9328xxJAuG6IOxFbOgpRCGUkqyZnXIxAEq8.HpBYQJ2K'
@@ -1245,9 +1289,9 @@ echo $k;</pre></p>
     html: `
       <p>How many characters are there in the following paragraph?
       </p>
-      
+
       <p>eehxhqpmawoewdffplqrturxdjlsaylymgxjsthjpacyuxnpuvqlezhosbnmmjzeeahjllnacofwyxxrelwgadsmolyynahrfvqkqonkgjsazwczwbayptsnsuvyomalyisyroxbivlqvtaltvjwtqbsbnscqmdcwxxdkvwctbynbvokdcovbebokjlmekezpcnoxvzzpaqhusdhgbhtqzeuoegylofircjlxdypcvekkllxjxlynidhgngtpblebyoazqvoccnhauwcsviqlbzsmyrproffqapjtizlrdasradufbjwhkllykgtrqivlrsrwswzdwjuktqgzkyslucqxgtseafofbhvhltparprjunrsivyhmelkkodvukwkoiwmhunbjmhtrvowapwuvogjqcaxwepbxoynhygxsqmbcavzvfydrptedyvbzrqficmrobquqvtcjoclyedsafxlhlmyxeyeumiswjjzdxxdqccyqvobspwhsmazmabshscmlquplbmhvvuiuasmjjajwyoyezgvxhpfteblvcuxhuosoekqtiobyvbdytyycyesmzkvbcupnbp</p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$widvKAPwcn/AyoyBfN/j4OvJhwy8sSgVd2qBZLrUO8lgOLdDNjwxa'
@@ -1271,26 +1315,26 @@ echo $k;</pre></p>
         <script>  var milisec=0;
         var seconds=10;
         document.counter.d2.value='10'
-        function display(){ 
-        if (milisec<=0){ 
-            milisec=9 
-            seconds-=1 
-        } 
-        if (seconds<=-1){ 
-            milisec=0 
-            seconds+=1 
-        } 
-        else 
-            milisec-=1 
-            document.counter.d2.value=seconds+"."+milisec 
-            setTimeout("display()",100) 
-        } 
-        display() 
-        </script> 
+        function display(){
+        if (milisec<=0){
+            milisec=9
+            seconds-=1
+        }
+        if (seconds<=-1){
+            milisec=0
+            seconds+=1
+        }
+        else
+            milisec-=1
+            document.counter.d2.value=seconds+"."+milisec
+            setTimeout("display()",100)
+        }
+        display()
+        </script>
         <p>Please type the sentence you see below quickly!<br>
-        <b style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;" 
+        <b style="-moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;"
  unselectable="on"
- onselectstart="return false;" 
+ onselectstart="return false;"
  onmousedown="return false;">${sentence}</b></p>
       `
     },
@@ -1324,7 +1368,7 @@ echo $k;</pre></p>
     html: `
       <p>What is the sum of the 10th through 17th (inclusive) Fibonacci numbers?
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$fCH5BEBX0DTLxlNXRVuHpOXiu99ILxrm67bEkY0Edv7Jwum1Si5xK'
@@ -1345,7 +1389,7 @@ echo $k;</pre></p>
       Day 5: the bacterium dies.</p>
 
       <p>A unique member of this kind has been collected by scientists. After 8 days, the population is 47. The question is: after how many days will the entire population of bacteria originated by this unique member reach the count of 1,000,000,000,000?</p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$0qFhUoFfXHPPn4yszTZ1e.yJ51p.0pYuFUaNSEJQWSgIQQ0ZGUmJy'
@@ -1359,7 +1403,7 @@ echo $k;</pre></p>
     html: `
       <p>The answer to this challenge is expressed musically by <a href="/chals/melodic.mp3">this melody</a>.
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$eSmbGe8BjBSxN1OraQ2Nnuw6/9.Bh1dfb71d7BioI2pCgJe8jzwRe'
@@ -1373,7 +1417,7 @@ echo $k;</pre></p>
     html: `
       <p>I asked a friend to read me the contents of a picture over the phone. Instead of reading the words in the picture, he read the <b>bytes</b> in the picture's <b>file</b>! You'll have to listen to <a href="/chals/text.mp3">this recording</a> to figure it out.
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$10$/Y7NDRw24n0EihO4cOCtBO9qSIDC.DXnyp7ur.GRdW.U2J2Rmp/pK'
@@ -1387,7 +1431,7 @@ echo $k;</pre></p>
     html: `
       <p>The answer to this challenge is expressed musically by <a href="/chals/harmonic.mp3">this chord</a>.
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$epnGVevZ6OEzbqTQq3CCb.5/8B7is5H.b.mtFPPb.rdmGl9QFgh2K'
@@ -1401,7 +1445,7 @@ echo $k;</pre></p>
     html: `
       <p>What is 28679718602997181072337614380936720482949 written in base 7?
       </p>
-    
+
     `,
     check: checkSolution(
       '$2y$06$R6blHLefFnE9WDYeAKZhsOLrh7p.ibPfBEVbEbwpyO9byX2lFEyZy'
@@ -1415,7 +1459,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1427,7 +1471,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1439,7 +1483,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1451,7 +1495,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1461,11 +1505,12 @@ echo $k;</pre></p>
     title: 'Russian Dolls',
     deps: [95, 138],
     html: `
-      <p>TODO
-      </p>
-    
+      <A HREF="misc/doll.bin">What a nice doll!</A>
+
     `,
-    check: checkSolution('')
+    check: checkSolution(
+        '$2y$10$/PW/JshJkjyKvy/a7JT4vuHJk3HIcl98RVhE7fzK.ty5O5LXiBzmu'
+    )
   },
   {
     id: 190,
@@ -1475,7 +1520,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1487,7 +1532,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1499,9 +1544,9 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
-    check: checkSolution('')
+    check: checkSolution('$2y$10$uHJ1Q4NZMnc8ZlzmOf4HF.X.WX7dy5IepSjPhSXHBrVyoz5WcSMjW')
   },  {
     id: 39,
     pos: { x: 891, y: 734 },
@@ -1510,7 +1555,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1522,7 +1567,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1534,7 +1579,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1546,7 +1591,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1558,7 +1603,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1570,7 +1615,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },{
@@ -1581,7 +1626,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1593,7 +1638,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1605,7 +1650,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1617,7 +1662,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1629,7 +1674,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1641,7 +1686,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1653,7 +1698,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1665,7 +1710,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1677,7 +1722,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1689,7 +1734,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1701,7 +1746,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1713,7 +1758,7 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
@@ -1721,8 +1766,8 @@ echo $k;</pre></p>
 ]
 
 /* TEMPLATE
- * 
-  
+ *
+
   {
     id: 205,
     pos: { x: 130, y: 340 },
@@ -1731,9 +1776,9 @@ echo $k;</pre></p>
     html: `
       <p>TODO
       </p>
-    
+
     `,
     check: checkSolution('')
   },
-  
+
 */
