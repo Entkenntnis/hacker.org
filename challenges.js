@@ -1495,7 +1495,7 @@ echo $k;</pre></p>
     id: 20,
     pos: { x: 245, y: 1203},
     title: 'Don\'t Blink',
-    deps: [62, 91],
+    deps: [47, 62, 74, 91],
     html: `
       <p>TODO
       </p>
@@ -1573,7 +1573,151 @@ echo $k;</pre></p>
     
     `,
     check: checkSolution('')
+  },{
+    id: 23,
+    pos: { x: 1123, y: 768 },
+    title: 'Ave',
+    deps: [77],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
   },
+  {
+    id: 13,
+    pos: { x: 1206, y: 872 },
+    title: 'More Dastardly',
+    deps: [23],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 14,
+    pos: { x: 863, y: 967 },
+    title: 'Steganographic',
+    deps: [13, 111],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 47,
+    pos: { x: 662, y: 1116 },
+    title: 'Keep Digging',
+    deps: [14, 116],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 217,
+    pos: { x: 1060, y: 848 },
+    title: 'iPod Fun',
+    deps: [23],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 111,
+    pos: { x: 966, y: 891 },
+    title: 'Voices in my Head',
+    deps: [58, 217],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 297,
+    pos: { x: 1230, y: 728 },
+    title: 'How is your Grammar?',
+    deps: [23],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 298,
+    pos: { x: 1282, y: 766 },
+    title: 'VIndicated',
+    deps: [297],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 58,
+    pos: { x: 938, y: 821 },
+    title: 'Lorem Ipsum',
+    deps: [77],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 74,
+    pos: { x: 651, y: 934 },
+    title: 'Inclusive',
+    deps: [58],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 116,
+    pos: { x: 576, y: 1056 },
+    title: 'One Minute Man',
+    deps: [74, 198],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 198,
+    pos: { x: 739, y: 993 },
+    title: 'I\'m So Special',
+    deps: [58],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+
 ]
 
 /* TEMPLATE
