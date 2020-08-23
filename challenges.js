@@ -800,30 +800,75 @@ for (i = 0; i < len(txt); i++)
       '$2y$06$T0zZ0JsGpYXnwadHh5vlKeCMMu1dym1trJMejlvsQmAwAiVCRFaVK'
     ),
   },
-  /*{
+  {
     id: 173,
-    pos: { x: 145, y: 510 },
+    pos: { x: 390, y: 580 },
     title: 'Didactic Scrambled Egg Cipher Pre-Warmup',
     deps: [158],
     html: `
-      <p>NO SOLUTION AT HAND
-      </p>
-    
+      <p>Here is a string of bytes encoded in hex:</p>
+      
+      <p><code>382d817119a18844865d880255a8221d90601ad164e8a8e1dd8a48f45846152255f839e09ab176154244faa95513d16e5e314078a97fdb8bb6da8d5615225695225674a4001a9177fb112277c45e17f85753c504d7187ed3cd43b107803827e09502559bf164292affe8aaa8e88ac898f9447119a188448692070056a2628864e6d7105edc5866b9b9b6ebcad6dc3982952a7674a62015025695225674a400d8715efb112277c45edb799f9728355c586f95b002e8aa815b83df3704571b99b6346426bd9862920721751857cb38f69bb3dee18ce1793bc857e27f74a400dd8a48d971bc15d07f521921b80948a86a8eb70457d1138279a796b8fbc43d9801e8ead669c8dcb10781788b5fe91097bad104d9ab952190a15ae706b50477b8dbe4d3cd437119c12842a42190e1a868aeb76446588d52b1078057e27cf7c65fa84aae5b8bbf6b88c19b9176a94a8eb7045778513712f1679b655d9c0255e88ac889b882b8f104711ba1dbabd7120520e188e195225655a802c184a0282affa86a8eb70457120542f7187658515f154244548a4212074278e7c6d3cd4595283e3d9a61d8ad56ba294878c5e69502551bf162487886280aff7b3309</code></p>
+      
+      <p>This sequence has been encrypted with a cipher that works as follows:</p>
+      
+<pre><code>key = {unknown 4-byte value}
+
+#define SCR_WIDTH 24
+#define SCR_LOOPS 3
+
+for (int eggs = {each 3-byte tuple in plaintext})
+{
+  unsigned int i, roll = 7;
+
+  for (i=0; i&lt;SCR_LOOPS; i++) {
+    eggs ^= (key[eggs&amp;0x3]&lt;&lt;8);
+    eggs  = (eggs&lt;&lt;roll)|(eggs>>(SCR_WIDTH-roll));
+    eggs &amp;= ((1&lt;&lt;SCR_WIDTH)-1);
+  }
+  
+  print eggs;
+}
+</code></pre>
     `,
-    check: checkSolution('')
+    check: checkSolution(
+      '$2y$10$S9Wk.IfVkm7LRKCMabaVR.ow6r7Px60POBwrfQe.UG2KFTHEbhinm'
+    ),
   },
   {
     id: 170,
-    pos: { x: 102, y: 570 },
+    pos: { x: 355, y: 660 },
     title: 'Didactic Scrambled Egg Cipher Warmup',
     deps: [173],
     html: `
-      <p>UNSOLVED
-      </p>
-    
+      <p>Here is a string of bytes encoded in hex:</p>
+      
+      <p><code>c49adf6e64df5a31a4752e87da5c3e268378e7a4c8c6e7bbfb99a25e5e3ee4b83a2e8cf1c39f5cc484bf4e87b1c66cd764e4f1666356f7cef9c568d8527995278f8256061597c631942d99abfb9f72819846f09fa62c862764d7f9b983fd8a5047d81dcea89427b0a4fc4257</code></p>
+      
+      <p>This sequence has been encrypted with a cipher that works as follows:</p>
+      
+      <pre><code>key = {unknown 16-byte value}
+
+#define SCR_WIDTH 24
+#define SCR_LOOPS 3
+
+for (int eggs = {each 3-byte tuple in plaintext})
+{
+  unsigned int i, roll = 7;
+
+  for (i=0; i&lt;SCR_LOOPS; i++) {
+    eggs ^= (key[eggs&amp;0xF]&lt;&lt;8);
+    eggs  = (eggs&lt;&lt;roll)|(eggs&gt;&gt;(SCR_WIDTH-roll));
+    eggs &amp;= ((1&lt;&lt;SCR_WIDTH)-1);
+  }
+  
+  print eggs;
+}</code></pre>
     `,
-    check: checkSolution('')
-  },*/
+    check: checkSolution(
+      '$2y$10$5iuMQOQ0qG6IUfw6uFb11.SdeNjYOvkIjUSdJeodjflWE9nF20Yf.'
+    ),
+  },
   {
     id: 165,
     pos: { x: 140, y: 595 },
@@ -1409,7 +1454,7 @@ echo $k;</pre></p>
   },
   {
     id: 153,
-    pos: { x: 1240, y: 590},
+    pos: { x: 1240, y: 590 },
     title: 'Valuation',
     deps: [77],
     html: `
@@ -1417,7 +1462,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 34,
@@ -1429,7 +1474,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 138,
@@ -1441,11 +1486,11 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 95,
-    pos: { x: 500, y: 750},
+    pos: { x: 500, y: 750 },
     title: 'The X Factor',
     deps: [34],
     html: `
@@ -1453,11 +1498,11 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 50,
-    pos: { x: 210, y: 795},
+    pos: { x: 210, y: 795 },
     title: 'Russian Dolls',
     deps: [95, 138],
     html: `
@@ -1465,11 +1510,11 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 190,
-    pos: { x: 340, y: 835},
+    pos: { x: 340, y: 835 },
     title: 'My Digits',
     deps: [95],
     html: `
@@ -1477,11 +1522,11 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 91,
-    pos: { x: 240, y: 995},
+    pos: { x: 240, y: 995 },
     title: 'A Piece of Pi',
     deps: [50, 190],
     html: `
@@ -1489,20 +1534,21 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 20,
-    pos: { x: 245, y: 1203},
-    title: 'Don\'t Blink',
+    pos: { x: 245, y: 1203 },
+    title: "Don't Blink",
     deps: [47, 62, 74, 91],
     html: `
       <p>TODO
       </p>
     
     `,
-    check: checkSolution('')
-  },  {
+    check: checkSolution(''),
+  },
+  {
     id: 39,
     pos: { x: 891, y: 734 },
     title: 'BCD',
@@ -1512,7 +1558,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 59,
@@ -1524,7 +1570,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 26,
@@ -1536,7 +1582,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 62,
@@ -1548,7 +1594,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 73,
@@ -1560,7 +1606,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 115,
@@ -1572,8 +1618,9 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
-  },{
+    check: checkSolution(''),
+  },
+  {
     id: 23,
     pos: { x: 1123, y: 768 },
     title: 'Ave',
@@ -1583,7 +1630,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 13,
@@ -1595,7 +1642,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 14,
@@ -1607,7 +1654,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 47,
@@ -1619,7 +1666,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 217,
@@ -1631,7 +1678,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 111,
@@ -1643,7 +1690,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 297,
@@ -1655,7 +1702,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 298,
@@ -1667,7 +1714,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 58,
@@ -1679,7 +1726,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 74,
@@ -1691,7 +1738,7 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 116,
@@ -1703,21 +1750,20 @@ echo $k;</pre></p>
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
   {
     id: 198,
     pos: { x: 739, y: 993 },
-    title: 'I\'m So Special',
+    title: "I'm So Special",
     deps: [58],
     html: `
       <p>TODO
       </p>
     
     `,
-    check: checkSolution('')
+    check: checkSolution(''),
   },
-
 ]
 
 /* TEMPLATE
