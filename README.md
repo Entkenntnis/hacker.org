@@ -20,11 +20,7 @@ To run this locally, clone the repo, run `npm install` and `npm start`. Visit lo
 
 Didactic Text 4 (after Didactic Text 3)
 
-Didactic Scrambled Egg Cipher Pre-Warmup (after Didactic XOR Cipher 2)
-
-Didactic Scrambled Egg Cipher Warmup (after above)
-
-Didactic Scrambled Egg Cipher (after above)
+Didactic Scrambled Egg Cipher (after Didactic Scrambled Egg Cipher Warmup)
 
 CipherQuest B (C, D) (after Don't Blink)
 
