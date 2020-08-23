@@ -756,18 +756,6 @@ accordinG to the unicity distance of english, 27.
       '$2y$06$SYA4893Y6fRzIvgzBjNzNuDQVsiDHEUMxWp2Maw5YHkrse2aAIcvu'
     ),
   },
-  /*{
-    id: 173,
-    pos: { x: 145, y: 510 },
-    title: 'Didactic Scrambled Egg Cipher Pre-Warmup',
-    deps: [158],
-    html: `
-      <p>NO SOLUTION AT HAND
-      </p>
-    
-    `,
-    check: checkSolution('')
-  },*/
   {
     id: 160,
     pos: { x: 290, y: 530 },
@@ -812,6 +800,30 @@ for (i = 0; i < len(txt); i++)
       '$2y$06$T0zZ0JsGpYXnwadHh5vlKeCMMu1dym1trJMejlvsQmAwAiVCRFaVK'
     ),
   },
+  /*{
+    id: 173,
+    pos: { x: 145, y: 510 },
+    title: 'Didactic Scrambled Egg Cipher Pre-Warmup',
+    deps: [158],
+    html: `
+      <p>NO SOLUTION AT HAND
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 170,
+    pos: { x: 102, y: 570 },
+    title: 'Didactic Scrambled Egg Cipher Warmup',
+    deps: [173],
+    html: `
+      <p>UNSOLVED
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },*/
   {
     id: 165,
     pos: { x: 140, y: 595 },
@@ -1364,7 +1376,7 @@ echo $k;</pre></p>
     
     `,
     check: checkSolution(
-      '$2y$06$Jf7I4qXZ7w0.BlxFhbbkD.ceC9eC59jKENOFyrU3nrB6kP2ve52Zy'
+      '$2y$10$/Y7NDRw24n0EihO4cOCtBO9qSIDC.DXnyp7ur.GRdW.U2J2Rmp/pK'
     ),
   },
   {
@@ -1394,6 +1406,173 @@ echo $k;</pre></p>
     check: checkSolution(
       '$2y$06$R6blHLefFnE9WDYeAKZhsOLrh7p.ibPfBEVbEbwpyO9byX2lFEyZy'
     ),
+  },
+  {
+    id: 153,
+    pos: { x: 1240, y: 590},
+    title: 'Valuation',
+    deps: [77],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 34,
+    pos: { x: 815, y: 680 },
+    title: 'The Powers That Be',
+    deps: [77],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 138,
+    pos: { x: 440, y: 685 },
+    title: 'Lower Count',
+    deps: [34],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 95,
+    pos: { x: 500, y: 750},
+    title: 'The X Factor',
+    deps: [34],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 50,
+    pos: { x: 210, y: 795},
+    title: 'Russian Dolls',
+    deps: [95, 138],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 190,
+    pos: { x: 340, y: 835},
+    title: 'My Digits',
+    deps: [95],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 91,
+    pos: { x: 240, y: 995},
+    title: 'A Piece of Pi',
+    deps: [50, 190],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 20,
+    pos: { x: 245, y: 1203},
+    title: 'Don\'t Blink',
+    deps: [62, 91],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },  {
+    id: 39,
+    pos: { x: 891, y: 734 },
+    title: 'BCD',
+    deps: [77],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 59,
+    pos: { x: 582, y: 897 },
+    title: '3280',
+    deps: [39],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 26,
+    pos: { x: 426, y: 1022 },
+    title: 'Follow the Logic',
+    deps: [59],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 62,
+    pos: { x: 269, y: 1101 },
+    title: 'Bit Test',
+    deps: [26, 73],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 73,
+    pos: { x: 344, y: 879 },
+    title: 'UpCount',
+    deps: [115],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
+  },
+  {
+    id: 115,
+    pos: { x: 538, y: 814 },
+    title: 'Delegates',
+    deps: [39],
+    html: `
+      <p>TODO
+      </p>
+    
+    `,
+    check: checkSolution('')
   },
 ]
 
