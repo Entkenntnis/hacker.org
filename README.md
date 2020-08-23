@@ -34,6 +34,8 @@ Dungeon Master
 
 Cavern Master
 
+Cave Master
+
 ### Acknowledgements
 
 Orginal content created by adum.
