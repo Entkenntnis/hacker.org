@@ -1,3 +1,5 @@
+Check out https://hack.arrrg.de/ which is available in English now!
+
 # hacker.org
 
 Hello guys, this is an attempt to open source https://hacker.org/ and preserver the magic behind this great site.
