@@ -1,6 +1,10 @@
-Check out https://hack.arrrg.de/ which is available in English now!
+**Important: This project is paused.**
+
+Check out https://hack.arrrg.de/ for an active project available in German and English, repo: https://github.com/Entkenntnis/htw
 
 # hacker.org
+
+**Important: This project is paused.**
 
 Hello guys, this is an attempt to open source https://hacker.org/ and preserver the magic behind this great site.
 
